@@ -1,0 +1,1262 @@
+[
+{
+  "question": "What airport has a runway length of 1533?",
+  "answer": "Alpena County Regional Airport",
+  "question_type": "sub",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Alpena County Regional Airport runwayLength 1533.",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-26T22:35:31.033058"
+}
+  {
+  "question": "What is the runway length of Alpena County Regional Airport?",
+  "answer": "1533",
+  "question_type": "obj",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Alpena County Regional Airport runwayLength 1533.",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-26T22:35:33.384837"
+},
+  {
+  "question": "What attribute is associated with Alpena County Regional Airport and the number 1533?",
+  "answer": "runwayLength",
+  "question_type": "rel",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Alpena County Regional Airport runwayLength 1533.",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-26T22:35:35.612455"
+},
+  {
+  "question": "Given the sentence \"The runway length of Alpena County Regional Airport is 1533,\" what type of entity is Alpena County Regional Airport?",
+  "answer": "Airport",
+  "question_type": "type",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Alpena County Regional Airport runwayLength 1533.",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-26T22:35:37.870046"
+},
+  {
+  "question": "Which airport has a runway named \"12/30\"?",
+  "answer": "Appleton International Airport",
+  "question_type": "sub",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Appleton International Airport runwayName 12/30. ",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-26T22:35:40.415166"
+},
+  {
+  "question": "What is the runway name of Appleton International Airport?",
+  "answer": "12/30",
+  "question_type": "obj",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Appleton International Airport runwayName 12/30. ",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-26T22:35:42.602854"
+},
+  {
+  "question": "What attribute is associated with Appleton International Airport and 12/30?",
+  "answer": "runwayName",
+  "question_type": "rel",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Appleton International Airport runwayName 12/30. ",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-26T22:35:44.723216"
+},
+  {
+  "question": "From the sentence \"The runway name of Appleton International Airport is 12/30\", what type of entity is Appleton International Airport?",
+  "answer": "Airport",
+  "question_type": "type",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Appleton International Airport runwayName 12/30. ",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-26T22:35:46.926548"
+},
+  {
+  "question": "What airbase has a runway length of 3090 meters?",
+  "answer": "Al Asad Airbase",
+  "question_type": "sub",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Al Asad Airbase runwayLengthMetre 3090. Ashgabat ",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-26T22:35:49.427334"
+},
+  {
+  "question": "What is the runway length of Al Asad Airbase?",
+  "answer": "3090",
+  "question_type": "obj",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Al Asad Airbase runwayLengthMetre 3090. Ashgabat ",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-26T22:35:51.860327"
+},
+  {
+  "question": "What is the measurement relationship between Al Asad Airbase and 3090?",
+  "answer": "runwayLengthMetre",
+  "question_type": "rel",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Al Asad Airbase runwayLengthMetre 3090. Ashgabat ",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-26T22:35:54.111544"
+},
+  {
+  "question": "Given the sentence \"The runway length of Al Asad Airbase is 3090 meters\", what type of entity is Al Asad Airbase?",
+  "answer": "Airport",
+  "question_type": "type",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Al Asad Airbase runwayLengthMetre 3090. Ashgabat ",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-26T22:35:56.476543"
+},
+  {
+  "question": "Who is the leader of Pakistan?",
+  "answer": "Pakistan",
+  "question_type": "sub",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Pakistan leader Anwar Zaheer Jamali. Iraq leader ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-26T22:35:58.660053"
+},
+  {
+  "question": "Who is the leader of Pakistan?",
+  "answer": "Anwar Zaheer Jamali",
+  "question_type": "obj",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Pakistan leader Anwar Zaheer Jamali. Iraq leader ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-26T22:36:00.733203"
+},
+  {
+  "question": "Who holds the position of leader in Pakistan?",
+  "answer": "leader",
+  "question_type": "rel",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Pakistan leader Anwar Zaheer Jamali. Iraq leader ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-26T22:36:02.864302"
+},
+  {
+  "question": "Based on the sentence \"The leader of Pakistan is Anwar Zaheer Jamali,\" what type of entity is Pakistan?",
+  "answer": "Country",
+  "question_type": "type",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Pakistan leader Anwar Zaheer Jamali. Iraq leader ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-26T22:36:05.015005"
+},
+  {
+  "question": "What government agency has jurisdiction over Flanders?",
+  "answer": "Flemish Government",
+  "question_type": "sub",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Flemish Government jurisdiction Flanders. Flemish",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-26T22:36:07.596714"
+},
+  {
+  "question": "What administrative region does the Flemish Government have jurisdiction over?",
+  "answer": "Flanders",
+  "question_type": "obj",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Flemish Government jurisdiction Flanders. Flemish",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-26T22:36:09.907241"
+},
+  {
+  "question": "What authority does the Flemish Government have over Flanders?",
+  "answer": "jurisdiction",
+  "question_type": "rel",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Flemish Government jurisdiction Flanders. Flemish",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-26T22:36:12.148909"
+},
+  {
+  "question": "Given the sentence \"Flemish Government jurisdiction is Flanders\", what type of entity is the Flemish Government?",
+  "answer": "GovernmentAgency",
+  "question_type": "type",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the retrieved triples: Flemish Government jurisdiction Flanders. Flemish",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-26T22:36:14.547690"
+},
+  {
+  "question": "What airport has a runway length of 1533 meters?",
+  "answer": "Alpena County Regional Airport",
+  "question_type": "sub",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Alpena County Regional Airport has a runway length o",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-27T00:06:40.702316"
+},
+  {
+  "question": "What is the runway length of Alpena County Regional Airport?",
+  "answer": "1533",
+  "question_type": "obj",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Alpena County Regional Airport has a runway length o",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-27T00:06:42.881708"
+},
+  {
+  "question": "What attribute does Alpena County Regional Airport have with a value of 1533?",
+  "answer": "runwayLength",
+  "question_type": "rel",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Alpena County Regional Airport has a runway length o",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-27T00:06:45.112747"
+},
+  {
+  "question": "Given the sentence \"The runway length of Alpena County Regional Airport is 1533,\" what type of entity is Alpena County Regional Airport?",
+  "answer": "Airport",
+  "question_type": "type",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Alpena County Regional Airport has a runway length o",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-27T00:06:47.933296"
+},
+  {
+  "question": "What airport has a runway named 12/30?",
+  "answer": "Appleton International Airport",
+  "question_type": "sub",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Appleton International Airport has a runway named 12",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-27T00:06:50.398902"
+},
+  {
+  "question": "What is the runway name of Appleton International Airport?",
+  "answer": "12/30",
+  "question_type": "obj",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Appleton International Airport has a runway named 12",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-27T00:06:53.238354"
+},
+  {
+  "question": "What attribute is associated with Appleton International Airport and 12/30?",
+  "answer": "runwayName",
+  "question_type": "rel",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Appleton International Airport has a runway named 12",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-27T00:06:55.412017"
+},
+  {
+  "question": "Given the sentence \"The runway name of Appleton International Airport is 12/30\", what type of entity is Appleton International Airport?",
+  "answer": "Airport",
+  "question_type": "type",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Appleton International Airport has a runway named 12",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-27T00:06:58.806783"
+},
+  {
+  "question": "What airbase has a runway length of 3090 meters?",
+  "answer": "Al Asad Airbase",
+  "question_type": "sub",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Al Asad Airbase has the relation 'runwayLengthMetre'",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-27T00:07:01.404413"
+},
+  {
+  "question": "What is the runway length of Al Asad Airbase?",
+  "answer": "3090",
+  "question_type": "obj",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Al Asad Airbase has the relation 'runwayLengthMetre'",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-27T00:07:03.453943"
+},
+  {
+  "question": "What characteristic is associated with Al Asad Airbase and 3090?",
+  "answer": "runwayLengthMetre",
+  "question_type": "rel",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Al Asad Airbase has the relation 'runwayLengthMetre'",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-27T00:07:05.589257"
+},
+  {
+  "question": "Given the sentence \"The runway length of Al Asad Airbase is 3090 meters\", what type of entity is Al Asad Airbase?",
+  "answer": "Airport",
+  "question_type": "type",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Al Asad Airbase has the relation 'runwayLengthMetre'",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-27T00:07:08.210571"
+},
+  {
+  "question": "Who is the leader of Pakistan?",
+  "answer": "Pakistan",
+  "question_type": "sub",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Pakistan is led by Anwar Zaheer Jamali. Iraq is led ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-27T00:07:10.614238"
+},
+  {
+  "question": "Who is the leader of Pakistan?",
+  "answer": "Anwar Zaheer Jamali",
+  "question_type": "obj",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Pakistan is led by Anwar Zaheer Jamali. Iraq is led ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-27T00:07:12.773049"
+},
+  {
+  "question": "Who is the leader of Pakistan?",
+  "answer": "leader",
+  "question_type": "rel",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Pakistan is led by Anwar Zaheer Jamali. Iraq is led ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-27T00:07:15.228405"
+},
+  {
+  "question": "Given the sentence \"The leader of Pakistan is Anwar Zaheer Jamali\", what type of entity is Pakistan?",
+  "answer": "Country",
+  "question_type": "type",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Pakistan is led by Anwar Zaheer Jamali. Iraq is led ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-27T00:07:17.376460"
+},
+  {
+  "question": "What government agency has jurisdiction over Flanders?",
+  "answer": "Flemish Government",
+  "question_type": "sub",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Flemish Government has jurisdiction over Flanders. F",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-27T00:07:19.581509"
+},
+  {
+  "question": "What administrative region does Flemish Government have jurisdiction over?",
+  "answer": "Flanders",
+  "question_type": "obj",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Flemish Government has jurisdiction over Flanders. F",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-27T00:07:21.686830"
+},
+  {
+  "question": "What authority does the Flemish Government have over Flanders?",
+  "answer": "jurisdiction",
+  "question_type": "rel",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Flemish Government has jurisdiction over Flanders. F",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-27T00:07:24.112532"
+},
+  {
+  "question": "Given the sentence \"Flemish Government jurisdiction is Flanders\", what type of entity is the Flemish Government?",
+  "answer": "GovernmentAgency",
+  "question_type": "type",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Flemish Government has jurisdiction over Flanders. F",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-27T00:07:26.450049"
+},
+  {
+  "question": "What airport has a runway length of 1533 meters?",
+  "answer": "Alpena County Regional Airport",
+  "question_type": "sub",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Alpena County Regional Airport has a runway length o",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-27T00:25:10.984571"
+},
+  {
+  "question": "How long is the runway at Alpena County Regional Airport?",
+  "answer": "1533",
+  "question_type": "obj",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Alpena County Regional Airport has a runway length o",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-27T00:25:16.087219"
+},
+  {
+  "question": "What attribute does Alpena County Regional Airport have with the value of 1533?",
+  "answer": "runwayLength",
+  "question_type": "rel",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Alpena County Regional Airport has a runway length o",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-27T00:25:18.302787"
+},
+  {
+  "question": "Given the sentence \"The runway length of Alpena County Regional Airport is 1533,\" what type of entity is Alpena County Regional Airport?",
+  "answer": "Airport",
+  "question_type": "type",
+  "source_text": "The runway length of Alpena County Regional Airport is 1533.",
+  "triple": [
+    "Alpena_County_Regional_Airport",
+    "runwayLength",
+    "1533"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLength",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_1",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Alpena County Regional Airport has a runway length o",
+  "rag_answer": "Alpena County Regional Airport",
+  "timestamp": "2025-08-27T00:25:20.685009"
+},
+  {
+  "question": "Which airport has a runway named 12/30?",
+  "answer": "Appleton International Airport",
+  "question_type": "sub",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Appleton International Airport has a runway named 12",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-27T00:25:23.165635"
+},
+  {
+  "question": "What is the runway name of Appleton International Airport?",
+  "answer": "12/30",
+  "question_type": "obj",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Appleton International Airport has a runway named 12",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-27T00:25:25.652111"
+},
+  {
+  "question": "What attribute is associated with Appleton International Airport and 12/30?",
+  "answer": "runwayName",
+  "question_type": "rel",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Appleton International Airport has a runway named 12",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-27T00:25:27.789365"
+},
+  {
+  "question": "Given the sentence \"The runway name of Appleton International Airport is 12/30\", what type of entity is Appleton International Airport?",
+  "answer": "Airport",
+  "question_type": "type",
+  "source_text": "The runway name of Appleton International Airport is 12/30.",
+  "triple": [
+    "Appleton_International_Airport",
+    "runwayName",
+    "12/30"
+  ],
+  "schema": [
+    "Airport",
+    "runwayName",
+    "Runway"
+  ],
+  "entry_id": "1_Airport_train_2",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Appleton International Airport has a runway named 12",
+  "rag_answer": "Appleton International Airport",
+  "timestamp": "2025-08-27T00:25:30.000724"
+},
+  {
+  "question": "What airbase has a runway length of 3090 meters?",
+  "answer": "Al Asad Airbase",
+  "question_type": "sub",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Al Asad Airbase has the relation 'runwayLengthMetre'",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-27T00:25:32.303390"
+},
+  {
+  "question": "What is the runway length of Al Asad Airbase?",
+  "answer": "3090",
+  "question_type": "obj",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Al Asad Airbase has the relation 'runwayLengthMetre'",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-27T00:25:35.039278"
+},
+  {
+  "question": "What attribute is associated with Al Asad Airbase and 3090?",
+  "answer": "runwayLengthMetre",
+  "question_type": "rel",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Al Asad Airbase has the relation 'runwayLengthMetre'",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-27T00:25:37.352027"
+},
+  {
+  "question": "Given the sentence \"The runway length of Al Asad Airbase is 3090 meters\", what type of entity is Al Asad Airbase?",
+  "answer": "Airport",
+  "question_type": "type",
+  "source_text": "The runway length of Al Asad Airbase is 3090 meters.",
+  "triple": [
+    "Al_Asad_Airbase",
+    "runwayLengthMetre",
+    "3090"
+  ],
+  "schema": [
+    "Airport",
+    "runwayLengthMetre",
+    "number"
+  ],
+  "entry_id": "1_Airport_train_3",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Al Asad Airbase has the relation 'runwayLengthMetre'",
+  "rag_answer": "Al Asad Airbase",
+  "timestamp": "2025-08-27T00:25:39.830060"
+},
+  {
+  "question": "Who is the leader of Pakistan?",
+  "answer": "Pakistan",
+  "question_type": "sub",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Pakistan is led by Anwar Zaheer Jamali. Iraq is led ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-27T00:25:42.290393"
+},
+  {
+  "question": "Who is the leader of Pakistan?",
+  "answer": "Anwar Zaheer Jamali",
+  "question_type": "obj",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Pakistan is led by Anwar Zaheer Jamali. Iraq is led ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-27T00:25:44.534804"
+},
+  {
+  "question": "Who leads Pakistan?",
+  "answer": "leader",
+  "question_type": "rel",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Pakistan is led by Anwar Zaheer Jamali. Iraq is led ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-27T00:25:46.609048"
+},
+  {
+  "question": "Given the sentence \"The leader of Pakistan is Anwar Zaheer Jamali\", what type of entity is Pakistan?",
+  "answer": "Country",
+  "question_type": "type",
+  "source_text": "The leader of Pakistan is Anwar Zaheer Jamali.",
+  "triple": [
+    "Pakistan",
+    "leader",
+    "Anwar_Zaheer_Jamali"
+  ],
+  "schema": [
+    "Country",
+    "leader",
+    "ChiefJustice"
+  ],
+  "entry_id": "1_Airport_train_4",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Pakistan is led by Anwar Zaheer Jamali. Iraq is led ",
+  "rag_answer": "Pakistan",
+  "timestamp": "2025-08-27T00:25:49.407083"
+},
+  {
+  "question": "What government agency has jurisdiction over Flanders?",
+  "answer": "Flemish Government",
+  "question_type": "sub",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Flemish Government has jurisdiction over Flanders. F",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-27T00:25:51.609567"
+},
+  {
+  "question": "Over what administrative region does the Flemish Government have jurisdiction?",
+  "answer": "Flanders",
+  "question_type": "obj",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Flemish Government has jurisdiction over Flanders. F",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-27T00:25:53.985071"
+},
+  {
+  "question": "What authority does the Flemish Government have over Flanders?",
+  "answer": "jurisdiction",
+  "question_type": "rel",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Flemish Government has jurisdiction over Flanders. F",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-27T00:25:56.123872"
+},
+  {
+  "question": "Given the sentence \"Flemish Government jurisdiction is Flanders\", what type of entity is the Flemish Government?",
+  "answer": "GovernmentAgency",
+  "question_type": "type",
+  "source_text": "Flemish Government jurisdiction is Flanders.",
+  "triple": [
+    "Flemish_Government",
+    "jurisdiction",
+    "Flanders"
+  ],
+  "schema": [
+    "GovernmentAgency",
+    "jurisdiction",
+    "AdministrativeRegion"
+  ],
+  "entry_id": "1_Airport_train_5",
+  "generation_method": "llm_with_prompt_template",
+  "rag_context": "Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.\nKnowledge 1: From the knowledge base: Flemish Government has jurisdiction over Flanders. F",
+  "rag_answer": "Flemish Government",
+  "timestamp": "2025-08-27T00:25:58.924677"
+}
+]

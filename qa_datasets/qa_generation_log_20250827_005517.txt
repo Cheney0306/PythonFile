@@ -1,0 +1,259 @@
+================================================================================
+QA生成详细日志
+开始时间: 2025-08-27 00:55:17
+================================================================================
+
+🔸==============================================================================🔸
+📋 条目ID: test_001
+🕐 时间: 2025-08-27 00:55:20
+🏷 问题类型: sub
+--------------------------------------------------------------------------------
+📝 输入文本:
+Amsterdam Airport Schiphol is located in the Netherlands and has a runway length of 3800 meters.
+--------------------------------------------------------------------------------
+🔍 RAG检索结果:
+检索知识: Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.
+Knowledge 1: From the knowledge base: Amsterdam Airport Schiphol has a runway named 18L/36R Aalsmeerbaan. Amsterdam Airport Schiphol has the relation '4thRunwaySurfaceType' with Asphalt. Ant...
+最终答案: Amsterdam Airport Schiphol
+问题类型: sub
+--------------------------------------------------------------------------------
+💬 构建的Prompt:
+
+**RAG System Results:**
+- Retrieved Knowledge: Reason 1: This question is asking about the subject (who/what) that performs an action or has a relationship.
+Knowledge 1: From the knowledge base: Amsterdam Airport Schiphol has a runway named 18L/36R Aalsmeerbaan. Amsterdam Airport Schiphol has the relation '4thRunwaySurfaceType' with Asphalt. Ant...
+- Final Answer: Amsterdam Airport Schiphol
+- Question Type: sub
+
+**Your Task:**
+Your task is to generate a natural language question based on the provided knowledge graph triple.
+The answer should be concise and specific - only the exact entity, relation, or type name without explanations.
+
+**Knowledge Graph Information:**
+- Subject: "Amsterdam Airport Schiphol" (Type: Airport)
+- Relation: "location"
+- Object: "Netherlands" (Type: Country)
+
+**Critical Requirements:**
+- Answer must be EXACTLY one word or phrase (the target entity/relation/type)
+- No explanations, context, or additional information
+- Focus questions on the core entity: "Amsterdam Airport Schiphol"
+
+**Instructions:**
+1. Generate a question about "Amsterdam Airport Schiphol" using its relationship with "Netherlands".
+2. The question should naturally lead to "Amsterdam Airport Schiphol" as the answer.
+3. Focus on the core entity's unique characteristics.
+
+**Example:**
+- Triple: (Amsterdam Airport Schiphol, location, Netherlands)
+- Question: What airport is located in the Netherlands?
+- Answer: Amsterdam Airport Schiphol
+
+**Avoid questions that could have multiple answers:**
+- Don't ask: "What airport has a runway length of 1533 meters?" (multiple airports could match)
+- Do ask: "What is the main airport of Amsterdam?" (unique identifier)
+
+Generate a question whose answer is exactly: "Amsterdam Airport Schiphol"
+
+
+**Output Format:**
+Please provide only:
+Question: [your question]
+Answer: [your answer]
+
+--------------------------------------------------------------------------------
+🤖 LLM生成的QA对:
+问题: What airport is located in the Netherlands?
+答案: Amsterdam Airport Schiphol
+生成方法: llm_with_prompt_template
+🔸==============================================================================🔸
+
+🔸==============================================================================🔸
+📋 条目ID: test_001
+🕐 时间: 2025-08-27 00:55:23
+🏷 问题类型: obj
+--------------------------------------------------------------------------------
+📝 输入文本:
+Amsterdam Airport Schiphol is located in the Netherlands and has a runway length of 3800 meters.
+--------------------------------------------------------------------------------
+🔍 RAG检索结果:
+检索知识: Reason 1: This question is asking about the object (what/who) that receives an action or is in a relationship.
+Knowledge 1: From the knowledge base: Amsterdam Airport Schiphol has a runway named 18L/36R Aalsmeerbaan. Amsterdam Airport Schiphol has the relation '4thRunwaySurfaceType' with Asphalt. An...
+最终答案: 18L/36R Aalsmeerbaan
+问题类型: obj
+--------------------------------------------------------------------------------
+💬 构建的Prompt:
+
+**RAG System Results:**
+- Retrieved Knowledge: Reason 1: This question is asking about the object (what/who) that receives an action or is in a relationship.
+Knowledge 1: From the knowledge base: Amsterdam Airport Schiphol has a runway named 18L/36R Aalsmeerbaan. Amsterdam Airport Schiphol has the relation '4thRunwaySurfaceType' with Asphalt. An...
+- Final Answer: 18L/36R Aalsmeerbaan
+- Question Type: obj
+
+**Your Task:**
+Your task is to generate a natural language question based on the provided knowledge graph triple.
+The answer should be concise and specific - only the exact entity, relation, or type name without explanations.
+
+**Knowledge Graph Information:**
+- Subject: "Amsterdam Airport Schiphol" (Type: Airport)
+- Relation: "location"
+- Object: "Netherlands" (Type: Country)
+
+**Critical Requirements:**
+- Answer must be EXACTLY one word or phrase (the target entity/relation/type)
+- No explanations, context, or additional information
+- Focus questions on the core entity: "Amsterdam Airport Schiphol"
+
+**Instructions:**
+1. Generate a question asking about "Amsterdam Airport Schiphol"'s relationship to "Netherlands".
+2. The question should be direct and specific to the core entity.
+3. Focus on what the core entity is related to, not general properties.
+
+**Example:**
+- Triple: (Alpena County Regional Airport, runwayLength, 1533)
+- Question: What is the runway length of Alpena County Regional Airport?
+- Answer: 1533
+
+Generate a question whose answer is exactly: "Netherlands"
+
+
+**Output Format:**
+Please provide only:
+Question: [your question]
+Answer: [your answer]
+
+--------------------------------------------------------------------------------
+🤖 LLM生成的QA对:
+问题: What country is Amsterdam Airport Schiphol located in?
+答案: Netherlands
+生成方法: llm_with_prompt_template
+🔸==============================================================================🔸
+
+🔸==============================================================================🔸
+📋 条目ID: test_001
+🕐 时间: 2025-08-27 00:55:25
+🏷 问题类型: rel
+--------------------------------------------------------------------------------
+📝 输入文本:
+Amsterdam Airport Schiphol is located in the Netherlands and has a runway length of 3800 meters.
+--------------------------------------------------------------------------------
+🔍 RAG检索结果:
+检索知识: Reason 1: This question is asking about the relationship or connection between two entities.
+Knowledge 1: From the knowledge base: Amsterdam Airport Schiphol has a runway named 18L/36R Aalsmeerbaan. Amsterdam Airport Schiphol has the relation '4thRunwaySurfaceType' with Asphalt. Antwerp Internationa...
+最终答案: runwayName
+问题类型: rel
+--------------------------------------------------------------------------------
+💬 构建的Prompt:
+
+**RAG System Results:**
+- Retrieved Knowledge: Reason 1: This question is asking about the relationship or connection between two entities.
+Knowledge 1: From the knowledge base: Amsterdam Airport Schiphol has a runway named 18L/36R Aalsmeerbaan. Amsterdam Airport Schiphol has the relation '4thRunwaySurfaceType' with Asphalt. Antwerp Internationa...
+- Final Answer: runwayName
+- Question Type: rel
+
+**Your Task:**
+Your task is to generate a natural language question based on the provided knowledge graph triple.
+The answer should be concise and specific - only the exact entity, relation, or type name without explanations.
+
+**Knowledge Graph Information:**
+- Subject: "Amsterdam Airport Schiphol" (Type: Airport)
+- Relation: "location"
+- Object: "Netherlands" (Type: Country)
+
+**Critical Requirements:**
+- Answer must be EXACTLY one word or phrase (the target entity/relation/type)
+- No explanations, context, or additional information
+- Focus questions on the core entity: "Amsterdam Airport Schiphol"
+
+**Instructions:**
+1. Generate a question asking about the relationship between "Amsterdam Airport Schiphol" and "Netherlands".
+2. The question should be open-ended enough to be answered by the relation name.
+3. Focus on the nature of the connection.
+
+**Example:**
+- Triple: (Amsterdam Airport Schiphol, location, Haarlemmermeer)
+- Question: What is the relationship between Amsterdam Airport Schiphol and Haarlemmermeer?
+- Answer: location
+
+Generate a question whose answer is exactly: "location"
+
+
+**Output Format:**
+Please provide only:
+Question: [your question]
+Answer: [your answer]
+
+--------------------------------------------------------------------------------
+🤖 LLM生成的QA对:
+问题: What is the relationship between Amsterdam Airport Schiphol and Netherlands?
+答案: location
+生成方法: llm_with_prompt_template
+🔸==============================================================================🔸
+
+🔸==============================================================================🔸
+📋 条目ID: test_001
+🕐 时间: 2025-08-27 00:55:28
+🏷 问题类型: type
+--------------------------------------------------------------------------------
+📝 输入文本:
+Amsterdam Airport Schiphol is located in the Netherlands and has a runway length of 3800 meters.
+--------------------------------------------------------------------------------
+🔍 RAG检索结果:
+检索知识: Reason 1: This question is asking about the type or category of an entity.
+Knowledge 1: From the knowledge base: Amsterdam Airport Schiphol has a runway named 18L/36R Aalsmeerbaan. Amsterdam Airport Schiphol has the relation '4thRunwaySurfaceType' with Asphalt.
+Knowledge 2: Entity types: Asphalt is ...
+最终答案: Airport
+问题类型: type
+--------------------------------------------------------------------------------
+💬 构建的Prompt:
+
+**RAG System Results:**
+- Retrieved Knowledge: Reason 1: This question is asking about the type or category of an entity.
+Knowledge 1: From the knowledge base: Amsterdam Airport Schiphol has a runway named 18L/36R Aalsmeerbaan. Amsterdam Airport Schiphol has the relation '4thRunwaySurfaceType' with Asphalt.
+Knowledge 2: Entity types: Asphalt is ...
+- Final Answer: Airport
+- Question Type: type
+
+**Your Task:**
+Your task is to generate a natural language question based on the provided knowledge graph triple.
+The answer should be concise and specific - only the exact entity, relation, or type name without explanations.
+
+**Knowledge Graph Information:**
+- Subject: "Amsterdam Airport Schiphol" (Type: Airport)
+- Relation: "location"
+- Object: "Netherlands" (Type: Country)
+
+**Critical Requirements:**
+- Answer must be EXACTLY one word or phrase (the target entity/relation/type)
+- No explanations, context, or additional information
+- Focus questions on the core entity: "Amsterdam Airport Schiphol"
+
+**Instructions:**
+1. Use the original text as context in the question.
+2. Ask about the type/category of the core entity "Amsterdam Airport Schiphol".
+3. The question should include the original sentence as background.
+
+**Example:**
+- Context: "New York is located in the United States."
+- Core entity: "United States"
+- Question: Given the sentence "New York is located in the United States", what type of entity is the United States?
+- Answer: Country
+
+**Context Text:** "Amsterdam Airport Schiphol is located in the Netherlands and has a runway length of 3800 meters."
+**Core Entity:** "Amsterdam Airport Schiphol"
+
+Generate a question whose answer is exactly: "Airport"
+
+
+**Output Format:**
+Please provide only:
+Question: [your question]
+Answer: [your answer]
+
+--------------------------------------------------------------------------------
+🤖 LLM生成的QA对:
+问题: Given the sentence "Amsterdam Airport Schiphol is located in the Netherlands and has a runway length of 3800 meters", what type of entity is Amsterdam Airport Schiphol?
+答案: Airport
+生成方法: llm_with_prompt_template
+🔸==============================================================================🔸
+
