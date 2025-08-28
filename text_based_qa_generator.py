@@ -9,6 +9,7 @@ from tqdm import tqdm
 from datetime import datetime
 import config
 from retrieval_engine import RetrievalEngine
+from enhanced_retrieval_engine import EnhancedRetrievalEngine
 
 # 导入prompt模板构建函数
 import sys
@@ -27,7 +28,9 @@ class TextBasedQAGenerator:
         self.openai_api_key = config.OPENAI_API_KEY
         self.output_dir = config.QA_OUTPUT_DIR
         self.train_dataset_path = config.DATASET_PATHS[0]  # 使用train数据集
-        self.retrieval_engine = RetrievalEngine()
+        # 可以选择使用原始系统或增强系统
+        # self.retrieval_engine = RetrievalEngine()  # 原始系统
+        self.retrieval_engine = EnhancedRetrievalEngine()  # 增强系统
         
         # 确保输出目录存在
         Path(self.output_dir).mkdir(exist_ok=True)

@@ -305,7 +305,7 @@ class CoTKRRewriter:
     
     def extract_answer_from_knowledge(self, question: str, cotkr_knowledge: str, retrieved_items: List[Dict], prompt_type: str = None) -> str:
         """
-        从CoTKR知识中提取答案 - 支持四种问题类型
+        从CoTKR知识中提取答案 - 支持四种问题类型，智能匹配最相关的答案
         
         Args:
             question: 查询问题或文本
@@ -330,42 +330,135 @@ class CoTKRRewriter:
             # 否则检测问题类型
             question_type = self.detect_question_type(question)
         
-        # 基于问题类型和检索结果提取答案
+        question_lower = question.lower()
+        
+        # 智能答案提取 - 根据问题类型和语义匹配
+        if question_type == 'subject':
+            return self._extract_subject_answer(question_lower, retrieved_items)
+        elif question_type == 'object':
+            return self._extract_object_answer(question_lower, retrieved_items)
+        elif question_type == 'relationship':
+            return self._extract_relationship_answer(question_lower, retrieved_items)
+        elif question_type == 'type':
+            return self._extract_type_answer(question_lower, retrieved_items)
+        
+        return "Information not available in the knowledge base."
+    
+    def _extract_subject_answer(self, question_lower: str, retrieved_items: List[Dict]) -> str:
+        """提取Subject类型问题的答案"""
+        # 寻找包含leader/president/king等关系的三元组
+        leadership_relations = ['leader', 'president', 'king', 'queen', 'prime_minister', 'head_of_state', 'ruler']
+        
+        for item in retrieved_items:
+            triple = item['triple']
+            sub, rel, obj = triple
+            
+            # 如果关系是领导类型，返回宾语（领导者）
+            if any(leadership in rel.lower() for leadership in leadership_relations):
+                return obj.replace('_', ' ')
+        
+        # 如果没找到领导关系，寻找问题中提到的实体作为主语的三元组
+        for item in retrieved_items:
+            triple = item['triple']
+            sub, rel, obj = triple
+            
+            # 检查问题中是否提到了主语实体
+            if any(entity in question_lower for entity in [sub.lower(), sub.replace('_', ' ').lower()]):
+                # 根据关系类型决定返回什么
+                if 'leader' in rel.lower() or 'president' in rel.lower() or 'king' in rel.lower():
+                    return obj.replace('_', ' ')
+        
+        # 默认返回第一个三元组的主语
+        if retrieved_items:
+            return retrieved_items[0]['triple'][0].replace('_', ' ')
+        
+        return "Information not available."
+    
+    def _extract_object_answer(self, question_lower: str, retrieved_items: List[Dict]) -> str:
+        """提取Object类型问题的答案"""
+        # 位置相关的关系
+        location_relations = ['location', 'located_in', 'country', 'city', 'region', 'place']
+        
+        # 如果问题询问位置
+        if any(word in question_lower for word in ['where', 'location', 'located', 'place']):
+            for item in retrieved_items:
+                triple = item['triple']
+                sub, rel, obj = triple
+                
+                # 寻找位置相关的关系
+                if any(loc_rel in rel.lower() for loc_rel in location_relations):
+                    return obj.replace('_', ' ')
+        
+        # 如果问题询问其他属性
         for item in retrieved_items:
             triple = item['triple']
             schema = item['schema']
             sub, rel, obj = triple
             sub_type, rel_type, obj_type = schema
             
-            # 清理名称
-            sub_clean = sub.replace('_', ' ')
-            obj_clean = obj.replace('_', ' ')
-            rel_clean = rel.replace('_', ' ')
-            
-            if question_type == 'subject':
-                # 返回主语
-                return sub_clean
-                
-            elif question_type == 'object':
-                # 返回宾语
-                return obj_clean
-                
-            elif question_type == 'relationship':
-                # 返回关系
-                return rel_clean
-                
-            elif question_type == 'type':
-                # 根据问题内容判断是询问主语还是宾语的类型
-                question_lower = question.lower()
-                if any(entity in question_lower for entity in [sub.lower(), sub_clean.lower()]):
-                    return sub_type
-                elif any(entity in question_lower for entity in [obj.lower(), obj_clean.lower()]):
-                    return obj_type
-                else:
-                    # 如果无法确定，返回主语类型
-                    return sub_type
+            # 检查问题中是否提到了主语实体
+            if any(entity in question_lower for entity in [sub.lower(), sub.replace('_', ' ').lower()]):
+                # 根据问题内容和关系类型返回合适的宾语
+                if 'where' in question_lower and any(loc_rel in rel.lower() for loc_rel in location_relations):
+                    return obj.replace('_', ' ')
+                elif 'what' in question_lower and obj_type.lower() not in ['runway', 'runwaysurfacetype']:
+                    return obj.replace('_', ' ')
         
-        return "Information not available in the knowledge base."
+        # 默认返回第一个非跑道相关的宾语
+        for item in retrieved_items:
+            triple = item['triple']
+            schema = item['schema']
+            sub, rel, obj = triple
+            obj_type = schema[2]
+            
+            if obj_type.lower() not in ['runway', 'runwaysurfacetype', 'runwayname']:
+                return obj.replace('_', ' ')
+        
+        # 最后默认返回第一个宾语
+        if retrieved_items:
+            return retrieved_items[0]['triple'][2].replace('_', ' ')
+        
+        return "Information not available."
+    
+    def _extract_relationship_answer(self, question_lower: str, retrieved_items: List[Dict]) -> str:
+        """提取Relationship类型问题的答案"""
+        # 直接返回关系，但优先选择最相关的
+        for item in retrieved_items:
+            triple = item['triple']
+            sub, rel, obj = triple
+            
+            # 检查问题中是否同时提到了主语和宾语
+            sub_mentioned = any(entity in question_lower for entity in [sub.lower(), sub.replace('_', ' ').lower()])
+            obj_mentioned = any(entity in question_lower for entity in [obj.lower(), obj.replace('_', ' ').lower()])
+            
+            if sub_mentioned and obj_mentioned:
+                return rel.replace('_', ' ')
+        
+        # 默认返回第一个关系
+        if retrieved_items:
+            return retrieved_items[0]['triple'][1].replace('_', ' ')
+        
+        return "Information not available."
+    
+    def _extract_type_answer(self, question_lower: str, retrieved_items: List[Dict]) -> str:
+        """提取Type类型问题的答案"""
+        for item in retrieved_items:
+            triple = item['triple']
+            schema = item['schema']
+            sub, rel, obj = triple
+            sub_type, rel_type, obj_type = schema
+            
+            # 检查问题中提到的实体
+            if any(entity in question_lower for entity in [sub.lower(), sub.replace('_', ' ').lower()]):
+                return sub_type
+            elif any(entity in question_lower for entity in [obj.lower(), obj.replace('_', ' ').lower()]):
+                return obj_type
+        
+        # 默认返回主语类型
+        if retrieved_items:
+            return retrieved_items[0]['schema'][0]
+        
+        return "Information not available."
 
 # 测试函数
 def test_cotkr_rewriter():
