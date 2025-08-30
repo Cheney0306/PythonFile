@@ -124,6 +124,80 @@ Answer:"""
             print(f"⚠ LLM调用失败: {e}")
             return "Error: LLM call failed"
     
+    def calculate_retrieval_metrics(self, retrieved_items: List[Dict], expected_answer: str, k_values: List[int] = [1, 3, 5]) -> Dict:
+        """
+        计算检索指标: Precision@k, Recall@k, nDCG@k
+        
+        Args:
+            retrieved_items: 检索到的项目列表
+            expected_answer: 期望答案
+            k_values: 要计算的k值列表
+        """
+        if not retrieved_items:
+            return {f'precision@{k}': 0.0 for k in k_values} | \
+                   {f'recall@{k}': 0.0 for k in k_values} | \
+                   {f'ndcg@{k}': 0.0 for k in k_values}
+        
+        # 计算每个检索项的相关性分数
+        relevance_scores = []
+        expected_words = set(expected_answer.lower().split())
+        
+        for item in retrieved_items:
+            # 从检索项中提取文本内容
+            item_text = ""
+            if 'text' in item and item['text']:
+                item_text = item['text']
+            elif 'document' in item and item['document']:
+                item_text = item['document']
+            elif 'triple' in item:
+                # 从三元组构建文本
+                triple = item['triple']
+                item_text = f"{triple[0]} {triple[1]} {triple[2]}"
+            
+            # 计算相关性分数 (基于词汇重叠)
+            item_words = set(item_text.lower().split())
+            if len(expected_words) > 0:
+                overlap = len(item_words.intersection(expected_words))
+                relevance = overlap / len(expected_words)
+            else:
+                relevance = 0.0
+            
+            # 转换为二进制相关性 (阈值为0.1)
+            is_relevant = 1 if relevance > 0.1 else 0
+            relevance_scores.append((relevance, is_relevant))
+        
+        metrics = {}
+        
+        for k in k_values:
+            k = min(k, len(retrieved_items))  # 确保k不超过检索项数量
+            
+            # Precision@k
+            relevant_at_k = sum(score[1] for score in relevance_scores[:k])
+            precision_k = relevant_at_k / k if k > 0 else 0.0
+            metrics[f'precision@{k}'] = precision_k
+            
+            # Recall@k (假设总相关文档数为1，即期望答案)
+            total_relevant = 1  # 简化假设
+            recall_k = min(relevant_at_k / total_relevant, 1.0) if total_relevant > 0 else 0.0
+            metrics[f'recall@{k}'] = recall_k
+            
+            # nDCG@k
+            dcg_k = 0.0
+            for i in range(k):
+                relevance = relevance_scores[i][0]
+                dcg_k += relevance / math.log2(i + 2)  # i+2 because log2(1) = 0
+            
+            # 理想DCG (假设最佳排序)
+            ideal_relevances = sorted([score[0] for score in relevance_scores], reverse=True)[:k]
+            idcg_k = 0.0
+            for i, relevance in enumerate(ideal_relevances):
+                idcg_k += relevance / math.log2(i + 2)
+            
+            ndcg_k = dcg_k / idcg_k if idcg_k > 0 else 0.0
+            metrics[f'ndcg@{k}'] = ndcg_k
+        
+        return metrics
+
     def evaluate_answer_similarity(self, predicted: str, expected: str) -> Dict[str, float]:
         """评估答案相似度"""
         predicted = predicted.lower().strip()
@@ -159,12 +233,26 @@ Answer:"""
         question = qa_item['question']
         expected_answer = qa_item['expected_answer']
         
-        # 1. 获取RAG系统答案
+        # 1. 获取RAG系统答案和检索详情
+        rag_retrieval_metrics = {}
         try:
             rag_result = self.enhanced_engine.retrieve_and_rewrite(question)
             rag_answer = rag_result.get('final_answer', 'No answer')
+            
+            # 计算检索指标
+            retrieved_items = rag_result.get('retrieved_items', [])
+            if retrieved_items:
+                rag_retrieval_metrics = self.calculate_retrieval_metrics(
+                    retrieved_items, expected_answer, k_values=[1, 3, 5]
+                )
+            
         except Exception as e:
             rag_answer = f"Error: {e}"
+            rag_retrieval_metrics = {
+                'precision@1': 0.0, 'precision@3': 0.0, 'precision@5': 0.0,
+                'recall@1': 0.0, 'recall@3': 0.0, 'recall@5': 0.0,
+                'ndcg@1': 0.0, 'ndcg@3': 0.0, 'ndcg@5': 0.0
+            }
         
         # 2. 获取纯LLM答案
         llm_answer = self.call_pure_llm(question)
@@ -180,6 +268,7 @@ Answer:"""
             'llm_answer': llm_answer,
             'rag_scores': rag_scores,
             'llm_scores': llm_scores,
+            'rag_retrieval_metrics': rag_retrieval_metrics,
             'question_type': qa_item.get('question_type', 'unknown'),
             'source_file': qa_item.get('source_file', 'unknown')
         }
@@ -213,17 +302,27 @@ Answer:"""
         """计算汇总统计"""
         rag_metrics = defaultdict(list)
         llm_metrics = defaultdict(list)
+        rag_retrieval_metrics = defaultdict(list)
         
         # 按问题类型分组
-        by_type = defaultdict(lambda: {'rag': defaultdict(list), 'llm': defaultdict(list)})
+        by_type = defaultdict(lambda: {
+            'rag': defaultdict(list), 
+            'llm': defaultdict(list),
+            'rag_retrieval': defaultdict(list)
+        })
         
         for result in results:
             q_type = result['question_type']
             
-            # 收集RAG指标
+            # 收集RAG答案质量指标
             for metric, score in result['rag_scores'].items():
                 rag_metrics[metric].append(score)
                 by_type[q_type]['rag'][metric].append(score)
+            
+            # 收集RAG检索指标
+            for metric, score in result.get('rag_retrieval_metrics', {}).items():
+                rag_retrieval_metrics[metric].append(score)
+                by_type[q_type]['rag_retrieval'][metric].append(score)
             
             # 收集LLM指标
             for metric, score in result['llm_scores'].items():
@@ -242,7 +341,8 @@ Answer:"""
         summary = {
             'overall': {
                 'rag': {metric: calc_stats(scores) for metric, scores in rag_metrics.items()},
-                'llm': {metric: calc_stats(scores) for metric, scores in llm_metrics.items()}
+                'llm': {metric: calc_stats(scores) for metric, scores in llm_metrics.items()},
+                'rag_retrieval': {metric: calc_stats(scores) for metric, scores in rag_retrieval_metrics.items()}
             },
             'by_question_type': {}
         }
@@ -251,7 +351,8 @@ Answer:"""
         for q_type, type_data in by_type.items():
             summary['by_question_type'][q_type] = {
                 'rag': {metric: calc_stats(scores) for metric, scores in type_data['rag'].items()},
-                'llm': {metric: calc_stats(scores) for metric, scores in type_data['llm'].items()}
+                'llm': {metric: calc_stats(scores) for metric, scores in type_data['llm'].items()},
+                'rag_retrieval': {metric: calc_stats(scores) for metric, scores in type_data['rag_retrieval'].items()}
             }
         
         return summary
@@ -282,6 +383,9 @@ Answer:"""
         # 保存问答对比
         self._save_qa_comparison(results, output_path, timestamp)
         
+        # 保存简化的问答记录 (每行一个问题)
+        self._save_simple_qa_records(results, output_path, timestamp)
+        
         # 生成Markdown报告
         self._generate_markdown_report(results, output_path, timestamp)
         
@@ -292,6 +396,7 @@ Answer:"""
         print(f"   - 问答对比: rag_vs_llm_qa_comparison_{timestamp}.json")
         print(f"   - 问答对比(易读): rag_vs_llm_qa_comparison_{timestamp}.txt")
         print(f"   - 问答对比(CSV): rag_vs_llm_qa_comparison_{timestamp}.csv")
+        print(f"   - 简化问答记录: simple_qa_records_{timestamp}.jsonl")
         print(f"   - Markdown报告: rag_vs_llm_report_{timestamp}.md")
     
     def _save_qa_comparison(self, results: Dict, output_path: Path, timestamp: str):
@@ -452,6 +557,24 @@ Answer:"""
         else:
             return 'TIE'
 
+    def _save_simple_qa_records(self, results: Dict, output_path: Path, timestamp: str):
+        """
+        保存简化的问答记录，每行一个JSON对象
+        格式: {"question": "...", "expected_answer": "...", "rag_answer": "...", "llm_answer": "..."}
+        """
+        simple_records_file = output_path / f"simple_qa_records_{timestamp}.jsonl"
+        
+        with open(simple_records_file, 'w', encoding='utf-8') as f:
+            for result in results.get('results', []):
+                record = {
+                    "question": result['question'],
+                    "expected_answer": result['expected_answer'],
+                    "rag_answer": result['rag_answer'],
+                    "llm_answer": result['llm_answer']
+                }
+                # 写入一行JSON
+                f.write(json.dumps(record, ensure_ascii=False) + '\n')
+
     def _generate_markdown_report(self, results: Dict, output_path: Path, timestamp: str):
         """生成Markdown报告"""
         report_file = output_path / f"rag_vs_llm_report_{timestamp}.md"
@@ -468,6 +591,7 @@ Answer:"""
             
             overall = results['summary']['overall']
             
+            f.write("### 答案质量对比\n\n")
             f.write("| 指标 | RAG系统 | 纯LLM | RAG优势 |\n")
             f.write("|------|---------|-------|--------|\n")
             
@@ -477,6 +601,22 @@ Answer:"""
                 improvement = ((rag_score - llm_score) / llm_score * 100) if llm_score > 0 else 0
                 
                 f.write(f"| {metric} | {rag_score:.4f} | {llm_score:.4f} | {improvement:+.1f}% |\n")
+            
+            # RAG检索性能指标
+            if 'rag_retrieval' in overall and overall['rag_retrieval']:
+                f.write("\n### RAG检索性能指标\n\n")
+                f.write("| 指标 | 平均值 | 标准差 |\n")
+                f.write("|------|--------|--------|\n")
+                
+                retrieval_metrics = ['precision@1', 'precision@3', 'precision@5', 
+                                   'recall@1', 'recall@3', 'recall@5',
+                                   'ndcg@1', 'ndcg@3', 'ndcg@5']
+                
+                for metric in retrieval_metrics:
+                    if metric in overall['rag_retrieval']:
+                        mean_score = overall['rag_retrieval'][metric]['mean']
+                        std_score = overall['rag_retrieval'][metric]['std']
+                        f.write(f"| {metric} | {mean_score:.4f} | {std_score:.4f} |\n")
             
             # 按问题类型分析
             f.write("\n## 📋 按问题类型分析\n\n")
@@ -541,6 +681,29 @@ Answer:"""
             print(f"    RAG系统: {rag_score:.4f} (±{rag_std:.4f})")
             print(f"    纯LLM:   {llm_score:.4f} (±{llm_std:.4f})")
             print(f"    RAG优势: {improvement:+.1f}%")
+        
+        # 显示RAG检索指标
+        if 'rag_retrieval' in overall and overall['rag_retrieval']:
+            print(f"\n🎯 RAG检索性能指标:")
+            print("-" * 40)
+            
+            retrieval_metrics_names = {
+                'precision@1': 'Precision@1',
+                'precision@3': 'Precision@3',
+                'precision@5': 'Precision@5',
+                'recall@1': 'Recall@1',
+                'recall@3': 'Recall@3',
+                'recall@5': 'Recall@5',
+                'ndcg@1': 'nDCG@1',
+                'ndcg@3': 'nDCG@3',
+                'ndcg@5': 'nDCG@5'
+            }
+            
+            for metric, name in retrieval_metrics_names.items():
+                if metric in overall['rag_retrieval']:
+                    score = overall['rag_retrieval'][metric]['mean']
+                    std = overall['rag_retrieval'][metric]['std']
+                    print(f"  {name}: {score:.4f} (±{std:.4f})")
         
         # 按问题类型显示最佳表现
         print(f"\n📋 按问题类型表现 (综合分数):")
