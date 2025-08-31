@@ -9,6 +9,14 @@ from embedding_client import EmbeddingClient
 import numpy as np
 from collections import defaultdict
 
+# 新增：导入sentence-transformers的CrossEncoder
+try:
+    from sentence_transformers import CrossEncoder
+    CROSS_ENCODER_AVAILABLE = True
+except ImportError:
+    print("⚠️ sentence-transformers未安装，将使用原有的重排方法")
+    CROSS_ENCODER_AVAILABLE = False
+
 class EnhancedVectorDatabaseManager:
     """增强的向量数据库管理器 - 实现更好的嵌入策略和多阶段检索"""
     
@@ -16,6 +24,17 @@ class EnhancedVectorDatabaseManager:
         self.client = chromadb.PersistentClient(path=config.CHROMA_DB_PATH)
         self.collection = None
         self.embedding_client = EmbeddingClient()
+        
+        # 【新】初始化Cross-Encoder重排模型
+        self.rerank_model = None
+        if CROSS_ENCODER_AVAILABLE:
+            try:
+                print("🔄 加载Cross-Encoder重排模型...")
+                self.rerank_model = CrossEncoder('BAAI/bge-reranker-base', max_length=512)
+                print("✅ Cross-Encoder模型加载成功")
+            except Exception as e:
+                print(f"⚠️ Cross-Encoder模型加载失败: {e}")
+                self.rerank_model = None
         
     def initialize_collection(self, collection_name: str = None, reset: bool = False):
         """初始化或重置集合"""
@@ -154,7 +173,7 @@ class EnhancedVectorDatabaseManager:
         print(f"✅ 增强数据库填充完成，总条目数: {self.collection.count()}")
     
     def multi_stage_retrieval(self, query: str, n_results: int = 10, 
-                             rerank_top_k: int = 20) -> List[Dict]:
+                             rerank_top_k: int = 20, rerank_method: str = 'original') -> List[Dict]:
         """
         多阶段检索重排
         
@@ -162,6 +181,7 @@ class EnhancedVectorDatabaseManager:
             query: 查询问题
             n_results: 最终返回的结果数量
             rerank_top_k: 第一阶段检索的数量，用于重排
+            rerank_method: 重排方法 ('original' 或 'cross_encoder')
         """
         if not self.collection:
             print("❌ 集合未初始化")
@@ -173,8 +193,12 @@ class EnhancedVectorDatabaseManager:
         if not stage1_results:
             return []
         
-        # 第二阶段：基于多种策略重排
-        stage2_results = self._stage2_reranking(query, stage1_results)
+        # 第二阶段：选择重排方法
+        if rerank_method == 'cross_encoder' and self.rerank_model is not None:
+            stage2_results = self._stage2_cross_encoder_reranking(query, stage1_results)
+        else:
+            # 使用原有的多策略重排
+            stage2_results = self._stage2_reranking(query, stage1_results)
         
         # 返回Top-K结果
         return stage2_results[:n_results]
@@ -249,6 +273,39 @@ class EnhancedVectorDatabaseManager:
         candidates.sort(key=lambda x: x['rerank_score'], reverse=True)
         
         return candidates
+    
+    def _stage2_cross_encoder_reranking(self, query: str, candidates: List[Dict]) -> List[Dict]:
+        """第二阶段：【新方法】使用Cross-Encoder模型进行重排"""
+        if not candidates:
+            return []
+        
+        if self.rerank_model is None:
+            print("⚠️ Cross-Encoder模型未加载，回退到原有重排方法")
+            return self._stage2_reranking(query, candidates)
+        
+        try:
+            # 创建模型需要输入的句子对：(查询, 候选文档的文本)
+            sentence_pairs = [[query, candidate['document']] for candidate in candidates]
+            
+            # 模型会为每个句子对计算一个相关性分数
+            scores = self.rerank_model.predict(sentence_pairs)
+            
+            # 将分数添加回候选文档中
+            for i in range(len(candidates)):
+                candidates[i]['rerank_score'] = float(scores[i])
+                candidates[i]['rerank_method'] = 'cross_encoder'
+                # 保留原有的详细分数用于对比
+                candidates[i]['original_stage1_score'] = candidates[i].get('stage1_score', 0)
+            
+            # 按新的重排分数降序排序
+            candidates.sort(key=lambda x: x['rerank_score'], reverse=True)
+            
+            return candidates
+            
+        except Exception as e:
+            print(f"⚠️ Cross-Encoder重排失败: {e}")
+            # 回退到原有重排方法
+            return self._stage2_reranking(query, candidates)
     
     def _calculate_entity_match_score(self, query: str, candidate: Dict) -> float:
         """计算实体匹配分数"""

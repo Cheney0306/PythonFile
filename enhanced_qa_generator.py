@@ -14,7 +14,14 @@ import random
 class EnhancedQAGenerator:
     """增强的QA生成器 - 使用增强检索系统，跳过重写模块，直接用三元组生成QA对"""
     
-    def __init__(self):
+    def __init__(self, enabled_question_types: List[str] = None):
+        """
+        初始化增强QA生成器
+        
+        Args:
+            enabled_question_types: 启用的问题类型列表，可选值: ['sub', 'obj', 'rel', 'type']
+                                   如果为None，则启用所有类型
+        """
         self.openai_api_key = config.OPENAI_API_KEY
         self.output_dir = config.QA_OUTPUT_DIR
         self.train_dataset_path = config.DATASET_PATHS[0]
@@ -32,8 +39,41 @@ class EnhancedQAGenerator:
         if not self.openai_api_key or self.openai_api_key == "your-openai-api-key-here":
             print("⚠ 警告: OpenAI API密钥未设置，将无法生成QA对")
             
-        # 问题类型定义
-        self.question_types = ['sub', 'obj', 'rel', 'type']
+        # 问题类型定义和配置
+        all_question_types = ['sub', 'obj', 'rel', 'type']
+        
+        if enabled_question_types is None:
+            self.question_types = all_question_types
+            print("📋 启用所有问题类型: sub, obj, rel, type")
+        else:
+            # 验证输入的问题类型
+            valid_types = [qt for qt in enabled_question_types if qt in all_question_types]
+            invalid_types = [qt for qt in enabled_question_types if qt not in all_question_types]
+            
+            if invalid_types:
+                print(f"⚠ 警告: 无效的问题类型 {invalid_types}，将被忽略")
+            
+            if not valid_types:
+                print("❌ 错误: 没有有效的问题类型，使用默认配置")
+                self.question_types = all_question_types
+            else:
+                self.question_types = valid_types
+                print(f"📋 启用的问题类型: {', '.join(self.question_types)}")
+        
+        # 问题类型说明
+        type_descriptions = {
+            'sub': '主语问题 (Who/What is...?)',
+            'obj': '宾语问题 (Where/What does...?)', 
+            'rel': '关系问题 (What is the relationship...?)',
+            'type': '类型问题 (What type of entity...?)'
+        }
+        
+        print("📝 问题类型说明:")
+        for qt in self.question_types:
+            print(f"   - {qt}: {type_descriptions.get(qt, '未知类型')}")
+        
+        if 'type' not in self.question_types:
+            print("✅ 已排除类型问题，这应该能提高QA质量")
     
     def _init_log_file(self):
         """初始化日志文件"""

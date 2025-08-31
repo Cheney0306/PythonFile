@@ -20,6 +20,13 @@ def main():
                        help='输出文件名 (默认: 自动生成)')
     parser.add_argument('--show-samples', action='store_true',
                        help='显示生成的QA对示例')
+    parser.add_argument('--question-types', type=str, nargs='+', 
+                       choices=['sub', 'obj', 'rel', 'type'], default=None,
+                       help='指定要生成的问题类型 (默认: 全部类型)')
+    parser.add_argument('--exclude-type', action='store_true',
+                       help='排除类型问题 (推荐，因为类型问题效果较差)')
+    parser.add_argument('--only-basic', action='store_true',
+                       help='只生成基础问题类型 (sub, obj, rel)，排除type')
     
     args = parser.parse_args()
     
@@ -32,9 +39,23 @@ def main():
     print(f"   - 处理数量: {'测试模式(少量)' if args.test_mode else ('全部文本' if args.max_texts is None else f'{args.max_texts} 个文本')}")
     
     try:
+        # 确定要生成的问题类型
+        enabled_types = None
+        if args.exclude_type:
+            enabled_types = ['sub', 'obj', 'rel']
+            print("🎯 排除类型问题模式")
+        elif args.only_basic:
+            enabled_types = ['sub', 'obj', 'rel'] 
+            print("🎯 只生成基础问题类型")
+        elif args.question_types:
+            enabled_types = args.question_types
+            print(f"🎯 自定义问题类型: {', '.join(enabled_types)}")
+        else:
+            print("🎯 生成所有问题类型")
+        
         # 使用增强QA生成器
         print(f"\n🔧 初始化增强QA生成器...")
-        generator = EnhancedQAGenerator()
+        generator = EnhancedQAGenerator(enabled_question_types=enabled_types)
         
         # 验证使用的是增强系统
         engine_type = type(generator.retrieval_engine).__name__
@@ -60,11 +81,18 @@ def main():
         if args.output_file:
             output_file = args.output_file
         else:
+            # 构建文件名，包含问题类型信息
+            type_suffix = ""
+            if args.exclude_type or args.only_basic:
+                type_suffix = "_no_type"
+            elif args.question_types:
+                type_suffix = f"_{'_'.join(args.question_types)}"
+            
             if args.test_mode:
-                output_file = "enhanced_qa_dataset_test.json"
+                output_file = f"enhanced_qa_dataset_test{type_suffix}.json"
             else:
                 text_count = args.max_texts if args.max_texts else 'all'
-                output_file = f"enhanced_qa_dataset_{text_count}_texts.json"
+                output_file = f"enhanced_qa_dataset_{text_count}_texts{type_suffix}.json"
         
         # 生成QA数据集
         print(f"\n🔄 开始使用增强系统生成QA数据集...")
@@ -128,6 +156,8 @@ def main():
         print(f"\n💡 使用建议:")
         print(f"   - 评估对比: python retrieval_evaluation_system.py --mode quick")
         print(f"   - 查看结果: python evaluation_viewer.py --action list")
+        print(f"   - 排除类型问题: python generate_enhanced_qa.py --exclude-type")
+        print(f"   - 只生成特定类型: python generate_enhanced_qa.py --question-types sub obj")
         
     except Exception as e:
         print(f"❌ 生成过程中出错: {e}")

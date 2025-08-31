@@ -1,0 +1,262 @@
+{
+  "database_stats": {
+    "collection_name": "new_kg_system_BAAI_bge-m3_enhanced",
+    "total_documents": 7090,
+    "status": "ready",
+    "enhancement": "multi-stage retrieval with reranking"
+  },
+  "sample_retrievals": {
+    "Who is the leader of Belgium?": [
+      {
+        "id": "3_Airport_train_85",
+        "triple": [
+          "Belgium",
+          "leader",
+          "Philippe_of_Belgium"
+        ],
+        "schema": [
+          "Country",
+          "leader",
+          "Royalty"
+        ],
+        "distance": 0.39595937728881836,
+        "document": "An instance of a 'Country' named 'Belgium' has a relation 'leader' with an instance of a 'Royalty' which is 'Philippe of Belgium'.",
+        "text": "Antwerp International Airport serves the city of Antwerp in Belgium where the leader is Philippe of Belgium.",
+        "source_file": "D:\\dataset\\train\\3_Airport.xml",
+        "metadata": {
+          "relation_context": "Country leader Royalty",
+          "sub_clean": "Belgium",
+          "sub": "Belgium",
+          "obj_type": "Royalty",
+          "full_context": "Belgium leader Philippe of Belgium Country Royalty",
+          "obj_clean": "Philippe of Belgium",
+          "source_file": "D:\\dataset\\train\\3_Airport.xml",
+          "rel_type": "leader",
+          "obj": "Philippe_of_Belgium",
+          "rel": "leader",
+          "text": "Antwerp International Airport serves the city of Antwerp in Belgium where the leader is Philippe of Belgium.",
+          "entities": "Belgium Philippe of Belgium",
+          "sub_type": "Country",
+          "rel_clean": "leader"
+        },
+        "stage1_score": 0.6040406227111816,
+        "rerank_score": 0.47601015567779537,
+        "detailed_scores": {
+          "entity_match": 0.5,
+          "relation_match": 0.7,
+          "type_match": 0.0,
+          "semantic_similarity": 0.6040406227111816
+        }
+      },
+      {
+        "id": "3_Airport_train_149",
+        "triple": [
+          "Belgium",
+          "leader",
+          "Charles_Michel"
+        ],
+        "schema": [
+          "Country",
+          "leader",
+          "PrimeMinister"
+        ],
+        "distance": 0.41559135913848877,
+        "document": "An instance of a 'Country' named 'Belgium' has a relation 'leader' with an instance of a 'PrimeMinister' which is 'Charles Michel'.",
+        "text": "Antwerp International Airport serves the city of Antwerp in Belgium where Charles Michel is a leader.",
+        "source_file": "D:\\dataset\\train\\3_Airport.xml",
+        "metadata": {
+          "entities": "Belgium Charles Michel",
+          "obj": "Charles_Michel",
+          "rel_clean": "leader",
+          "sub_clean": "Belgium",
+          "obj_clean": "Charles Michel",
+          "rel": "leader",
+          "rel_type": "leader",
+          "full_context": "Belgium leader Charles Michel Country PrimeMinister",
+          "obj_type": "PrimeMinister",
+          "sub": "Belgium",
+          "text": "Antwerp International Airport serves the city of Antwerp in Belgium where Charles Michel is a leader.",
+          "source_file": "D:\\dataset\\train\\3_Airport.xml",
+          "sub_type": "Country",
+          "relation_context": "Country leader PrimeMinister"
+        },
+        "stage1_score": 0.5844086408615112,
+        "rerank_score": 0.47110216021537776,
+        "detailed_scores": {
+          "entity_match": 0.5,
+          "relation_match": 0.7,
+          "type_match": 0.0,
+          "semantic_similarity": 0.5844086408615112
+        }
+      }
+    ],
+    "Where is Amsterdam Airport located?": [
+      {
+        "id": "1_Airport_train_208",
+        "triple": [
+          "Amsterdam_Airport_Schiphol",
+          "serves",
+          "Amsterdam"
+        ],
+        "schema": [
+          "Airport",
+          "serves",
+          "CapitalCity"
+        ],
+        "distance": 0.4671252369880676,
+        "document": "An instance of a 'Airport' named 'Amsterdam Airport Schiphol' has a relation 'serves' with an instance of a 'CapitalCity' which is 'Amsterdam'.",
+        "text": "Amsterdam Airport Schiphol serves the city of Amsterdam.",
+        "source_file": "D:\\dataset\\train\\1_Airport.xml",
+        "metadata": {
+          "entities": "Amsterdam Airport Schiphol Amsterdam",
+          "obj_clean": "Amsterdam",
+          "sub_clean": "Amsterdam Airport Schiphol",
+          "obj": "Amsterdam",
+          "rel_type": "serves",
+          "sub_type": "Airport",
+          "relation_context": "Airport serves CapitalCity",
+          "full_context": "Amsterdam Airport Schiphol serves Amsterdam Airport CapitalCity",
+          "text": "Amsterdam Airport Schiphol serves the city of Amsterdam.",
+          "source_file": "D:\\dataset\\train\\1_Airport.xml",
+          "obj_type": "CapitalCity",
+          "rel": "serves",
+          "sub": "Amsterdam_Airport_Schiphol",
+          "rel_clean": "serves"
+        },
+        "stage1_score": 0.5328747630119324,
+        "rerank_score": 0.4932186907529831,
+        "detailed_scores": {
+          "entity_match": 0.7999999999999999,
+          "relation_match": 0.0,
+          "type_match": 0.6000000000000001,
+          "semantic_similarity": 0.5328747630119324
+        }
+      },
+      {
+        "id": "2_Airport_train_117",
+        "triple": [
+          "Amsterdam_Airport_Schiphol",
+          "serves",
+          "Amsterdam"
+        ],
+        "schema": [
+          "Airport",
+          "serves",
+          "CapitalCity"
+        ],
+        "distance": 0.4671252369880676,
+        "document": "An instance of a 'Airport' named 'Amsterdam Airport Schiphol' has a relation 'serves' with an instance of a 'CapitalCity' which is 'Amsterdam'.",
+        "text": "The Amsterdam Airport Schiphol, which serves the city of Amsterdam, has a runway length of 3453.",
+        "source_file": "D:\\dataset\\train\\2_Airport.xml",
+        "metadata": {
+          "obj_clean": "Amsterdam",
+          "sub": "Amsterdam_Airport_Schiphol",
+          "obj_type": "CapitalCity",
+          "relation_context": "Airport serves CapitalCity",
+          "obj": "Amsterdam",
+          "text": "The Amsterdam Airport Schiphol, which serves the city of Amsterdam, has a runway length of 3453.",
+          "rel_type": "serves",
+          "rel_clean": "serves",
+          "sub_clean": "Amsterdam Airport Schiphol",
+          "entities": "Amsterdam Airport Schiphol Amsterdam",
+          "source_file": "D:\\dataset\\train\\2_Airport.xml",
+          "sub_type": "Airport",
+          "full_context": "Amsterdam Airport Schiphol serves Amsterdam Airport CapitalCity",
+          "rel": "serves"
+        },
+        "stage1_score": 0.5328747630119324,
+        "rerank_score": 0.4932186907529831,
+        "detailed_scores": {
+          "entity_match": 0.7999999999999999,
+          "relation_match": 0.0,
+          "type_match": 0.6000000000000001,
+          "semantic_similarity": 0.5328747630119324
+        }
+      }
+    ],
+    "What type is Belgium?": [
+      {
+        "id": "3_Airport_train_85",
+        "triple": [
+          "Belgium",
+          "leader",
+          "Philippe_of_Belgium"
+        ],
+        "schema": [
+          "Country",
+          "leader",
+          "Royalty"
+        ],
+        "distance": 0.39271485805511475,
+        "document": "An instance of a 'Country' named 'Belgium' has a relation 'leader' with an instance of a 'Royalty' which is 'Philippe of Belgium'.",
+        "text": "Antwerp International Airport serves the city of Antwerp in Belgium where the leader is Philippe of Belgium.",
+        "source_file": "D:\\dataset\\train\\3_Airport.xml",
+        "metadata": {
+          "entities": "Belgium Philippe of Belgium",
+          "obj": "Philippe_of_Belgium",
+          "sub_clean": "Belgium",
+          "obj_clean": "Philippe of Belgium",
+          "sub_type": "Country",
+          "sub": "Belgium",
+          "rel_clean": "leader",
+          "text": "Antwerp International Airport serves the city of Antwerp in Belgium where the leader is Philippe of Belgium.",
+          "obj_type": "Royalty",
+          "relation_context": "Country leader Royalty",
+          "rel": "leader",
+          "full_context": "Belgium leader Philippe of Belgium Country Royalty",
+          "rel_type": "leader",
+          "source_file": "D:\\dataset\\train\\3_Airport.xml"
+        },
+        "stage1_score": 0.6072851419448853,
+        "rerank_score": 0.30182128548622134,
+        "detailed_scores": {
+          "entity_match": 0.5,
+          "relation_match": 0.0,
+          "type_match": 0.0,
+          "semantic_similarity": 0.6072851419448853
+        }
+      },
+      {
+        "id": "1_Airport_train_233",
+        "triple": [
+          "Antwerp",
+          "country",
+          "Belgium"
+        ],
+        "schema": [
+          "City",
+          "country",
+          "Country"
+        ],
+        "distance": 0.438467800617218,
+        "document": "An instance of a 'City' named 'Antwerp' has a relation 'country' with an instance of a 'Country' which is 'Belgium'.",
+        "text": "Antwerp is in the country of Belgium.",
+        "source_file": "D:\\dataset\\train\\1_Airport.xml",
+        "metadata": {
+          "full_context": "Antwerp country Belgium City Country",
+          "text": "Antwerp is in the country of Belgium.",
+          "rel_type": "country",
+          "obj_clean": "Belgium",
+          "relation_context": "City country Country",
+          "rel": "country",
+          "obj_type": "Country",
+          "rel_clean": "country",
+          "sub_type": "City",
+          "obj": "Belgium",
+          "source_file": "D:\\dataset\\train\\1_Airport.xml",
+          "sub": "Antwerp",
+          "entities": "Antwerp Belgium",
+          "sub_clean": "Antwerp"
+        },
+        "stage1_score": 0.561532199382782,
+        "rerank_score": 0.2903830498456955,
+        "detailed_scores": {
+          "entity_match": 0.5,
+          "relation_match": 0.0,
+          "type_match": 0.0,
+          "semantic_similarity": 0.561532199382782
+        }
+      }
+    ]
+  }
+}

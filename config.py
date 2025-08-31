@@ -25,7 +25,7 @@ ENHANCED_COLLECTION_NAME = f"enhanced_kg_system_{EMBEDDING_MODEL.replace('/', '_
 
 # --- Enhanced System Configuration ---
 RERANKING_ENABLED = True
-RERANK_TOP_K_MULTIPLIER = 2  # 第一阶段检索数量 = n_results * multiplier
+RERANK_TOP_K_MULTIPLIER = 4  # 第一阶段检索数量 = n_results * multiplier
 
 # --- Processing Configuration ---
 BATCH_SIZE = 32

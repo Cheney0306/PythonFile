@@ -1,0 +1,5053 @@
+{
+  "summary": {
+    "original_method": {
+      "avg_precision": {
+        "precision@1": 0.76,
+        "precision@3": 0.7366666666666666,
+        "precision@5": 0.696,
+        "precision@10": 0.6169999999999999
+      },
+      "avg_recall": {
+        "recall@1": 0.76,
+        "recall@3": 0.89,
+        "recall@5": 0.93,
+        "recall@10": 0.95
+      },
+      "avg_ndcg": {
+        "ndcg@1": 0.76,
+        "ndcg@3": 1.5871252077857338,
+        "ndcg@5": 2.105598998493691,
+        "ndcg@10": 2.9672383899152766
+      },
+      "avg_time": 0.11524338245391846
+    },
+    "cross_encoder_method": {
+      "avg_precision": {
+        "precision@1": 0.72,
+        "precision@3": 0.71,
+        "precision@5": 0.672,
+        "precision@10": 0.5910000000000002
+      },
+      "avg_recall": {
+        "recall@1": 0.72,
+        "recall@3": 0.85,
+        "recall@5": 0.9,
+        "recall@10": 0.95
+      },
+      "avg_ndcg": {
+        "ndcg@1": 0.72,
+        "ndcg@3": 1.5192694225714465,
+        "ndcg@5": 2.0235838135151876,
+        "ndcg@10": 2.841877599456583
+      },
+      "avg_time": 2.041438238620758
+    }
+  },
+  "detailed_results": [
+    {
+      "question": "What type of entity is Asser Levy Public Baths in New York City?",
+      "expected_answer": "Building",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.14959287643432617,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.3952698707580566,
+        "results_count": 10
+      },
+      "test_id": 1,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Asilomar Conference Grounds based on its architect Julia Morgan?",
+      "expected_answer": "Building",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11167240142822266,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.2313950061798096,
+        "results_count": 10
+      },
+      "test_id": 2,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Who is the architect of Amdavad Ni Gufa?",
+      "expected_answer": "B. V. Doshi",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.0
+        },
+        "time": 0.10493183135986328,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.0
+        },
+        "time": 1.9574508666992188,
+        "results_count": 10
+      },
+      "test_id": 3,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which band is Alison O'Donnell associated with?",
+      "expected_answer": "United Bible Studies",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.4,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.6309297535714575,
+          "ndcg@5": 1.0177825608059992,
+          "ndcg@10": 1.3188125564699804
+        },
+        "time": 0.11893773078918457,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.6309297535714575,
+          "ndcg@5": 1.0177825608059992,
+          "ndcg@10": 1.0177825608059992
+        },
+        "time": 2.072209358215332,
+        "results_count": 10
+      },
+      "test_id": 4,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What category does Aleksandra Kovač belong to?",
+      "expected_answer": "MusicalArtist",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.09092283248901367,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.0925650596618652,
+        "results_count": 10
+      },
+      "test_id": 5,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which team is in the Salvadoran Primera División league?",
+      "expected_answer": "A.D. Isidro Metapán",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.6309297535714575,
+          "ndcg@5": 0.6309297535714575,
+          "ndcg@10": 0.6309297535714575
+        },
+        "time": 0.10105180740356445,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.6309297535714575,
+          "ndcg@5": 0.6309297535714575,
+          "ndcg@10": 0.6309297535714575
+        },
+        "time": 2.447550058364868,
+        "results_count": 10
+      },
+      "test_id": 6,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of artist is Alfredo Zitarrosa known as in the music industry?",
+      "expected_answer": "MusicalArtist",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.09945464134216309,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.2604665756225586,
+        "results_count": 10
+      },
+      "test_id": 7,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is '11 Diagonal Street' based on the architect information provided?",
+      "expected_answer": "Building",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.1037895679473877,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.16709041595459,
+        "results_count": 10
+      },
+      "test_id": 8,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Where is the headquarters of Turkmenistan Airlines located?",
+      "expected_answer": "Ashgabat",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.6,
+          "precision@10": 0.8
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.6309297535714575,
+          "ndcg@5": 1.4484591188793923,
+          "ndcg@10": 3.043559338088346
+        },
+        "time": 0.1027674674987793,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.9786053467592434
+        },
+        "time": 2.1401233673095703,
+        "results_count": 10
+      },
+      "test_id": 9,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "How long is the runway at Athens International Airport?",
+      "expected_answer": "Athens_International_Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.0
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 0
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.0
+        },
+        "time": 0.10196089744567871,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.0
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 0
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.0
+        },
+        "time": 2.007129669189453,
+        "results_count": 10
+      },
+      "test_id": 10,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What city is part of Dale?",
+      "expected_answer": "Greenville",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.6309297535714575,
+          "ndcg@5": 0.6309297535714575,
+          "ndcg@10": 0.6309297535714575
+        },
+        "time": 0.09551358222961426,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.0
+        },
+        "time": 1.7486529350280762,
+        "results_count": 10
+      },
+      "test_id": 11,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which record label is Alison O'Donnell signed to?",
+      "expected_answer": "Alison O'Donnell",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.09271574020385742,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.5
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 2.9484591188793923
+        },
+        "time": 2.205988883972168,
+        "results_count": 10
+      },
+      "test_id": 12,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Jacksonville Dolphins in relation to its location in Jacksonville?",
+      "expected_answer": "SoccerClub",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.7
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.637999639320748
+        },
+        "time": 0.09997987747192383,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.7
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.637999639320748
+        },
+        "time": 2.2876341342926025,
+        "results_count": 10
+      },
+      "test_id": 13,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the runway number at Angola International Airport?",
+      "expected_answer": "1stRunwayNumber",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 1.6309297535714575,
+          "ndcg@10": 1.6309297535714575
+        },
+        "time": 0.10315608978271484,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.5,
+          "ndcg@5": 0.9306765580733931,
+          "ndcg@10": 0.9306765580733931
+        },
+        "time": 2.088244676589966,
+        "results_count": 10
+      },
+      "test_id": 14,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which city does Angola International Airport serve?",
+      "expected_answer": "Angola_International_Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.0
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 0
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.0
+        },
+        "time": 0.09652090072631836,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.5,
+          "ndcg@5": 0.9306765580733931,
+          "ndcg@10": 0.9306765580733931
+        },
+        "time": 1.9771647453308105,
+        "results_count": 10
+      },
+      "test_id": 15,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What category does Poaceae belong to?",
+      "expected_answer": "Family",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.09300899505615234,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 1.892148733139038,
+        "results_count": 10
+      },
+      "test_id": 16,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What institution is the London government known as?",
+      "expected_answer": "Parliament of the United Kingdom",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.8,
+          "precision@10": 0.7
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 1.1309297535714575,
+          "ndcg@5": 1.9484591188793923,
+          "ndcg@10": 2.894761127969284
+        },
+        "time": 0.09614706039428711,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.5
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 2.9484591188793923
+        },
+        "time": 2.1306967735290527,
+        "results_count": 10
+      },
+      "test_id": 17,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Athens International Airport?",
+      "expected_answer": "Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.09088969230651855,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.173758029937744,
+        "results_count": 10
+      },
+      "test_id": 18,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the name of the runway at Ardmore Airport in New Zealand?",
+      "expected_answer": "07/25",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.5,
+          "ndcg@5": 0.5,
+          "ndcg@10": 0.5
+        },
+        "time": 0.09742450714111328,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.5,
+          "ndcg@5": 0.5,
+          "ndcg@10": 0.5
+        },
+        "time": 2.1916801929473877,
+        "results_count": 10
+      },
+      "test_id": 19,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the name of the runway at Allama Iqbal International Airport?",
+      "expected_answer": "runwayName",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.0
+        },
+        "time": 0.0941004753112793,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5616063116448506,
+          "ndcg@10": 2.5616063116448506
+        },
+        "time": 2.172201633453369,
+        "results_count": 10
+      },
+      "test_id": 20,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the runway name of Ardmore Airport?",
+      "expected_answer": "07/25",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.5,
+          "ndcg@5": 0.5,
+          "ndcg@10": 0.5
+        },
+        "time": 0.10580921173095703,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.5,
+          "ndcg@5": 0.5,
+          "ndcg@10": 0.5
+        },
+        "time": 2.1470956802368164,
+        "results_count": 10
+      },
+      "test_id": 21,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "Which national football team is Abel Hernández affiliated with?",
+      "expected_answer": "Uruguay national football team",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.6,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 2.0177825608059994,
+          "ndcg@10": 2.3739897479140217
+        },
+        "time": 0.11792111396789551,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.4,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.5,
+          "ndcg@5": 0.9306765580733931,
+          "ndcg@10": 1.2868837451814152
+        },
+        "time": 2.094723701477051,
+        "results_count": 10
+      },
+      "test_id": 22,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What genre is Alfredo Zitarrosa associated with?",
+      "expected_answer": "genre",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.09649014472961426,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.088247776031494,
+        "results_count": 10
+      },
+      "test_id": 23,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which band is Aaron Deer associated with?",
+      "expected_answer": "John Wilkes Booze",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.5,
+          "ndcg@5": 0.5,
+          "ndcg@10": 0.5
+        },
+        "time": 0.12338423728942871,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.0
+        },
+        "time": 1.9439191818237305,
+        "results_count": 10
+      },
+      "test_id": 24,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which band is Alison O'Donnell associated with?",
+      "expected_answer": "Alison O'Donnell",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11409926414489746,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.2122201919555664,
+        "results_count": 10
+      },
+      "test_id": 25,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Who owns Antwerp International Airport?",
+      "expected_answer": "owner",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 1.2388930321009313
+        },
+        "time": 0.10102462768554688,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.2,
+          "precision@10": 0.5
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.38685280723454163,
+          "ndcg@10": 1.6928882001256071
+        },
+        "time": 2.03798508644104,
+        "results_count": 10
+      },
+      "test_id": 26,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the name of the runway at Alpena County Regional Airport?",
+      "expected_answer": "7/25",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.6309297535714575,
+          "ndcg@5": 0.6309297535714575,
+          "ndcg@10": 0.6309297535714575
+        },
+        "time": 0.15851187705993652,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.6309297535714575,
+          "ndcg@5": 0.6309297535714575,
+          "ndcg@10": 0.6309297535714575
+        },
+        "time": 2.1807422637939453,
+        "results_count": 10
+      },
+      "test_id": 27,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "What do we call people from the United Kingdom?",
+      "expected_answer": "British people",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.5900948219818691
+        },
+        "time": 0.1145477294921875,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.0
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 0
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.0
+        },
+        "time": 2.0026044845581055,
+        "results_count": 10
+      },
+      "test_id": 28,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Ardmore Airport?",
+      "expected_answer": "Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.10698914527893066,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.165949821472168,
+        "results_count": 10
+      },
+      "test_id": 29,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Ashgabat International Airport?",
+      "expected_answer": "Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.10483503341674805,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.1873834133148193,
+        "results_count": 10
+      },
+      "test_id": 30,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which airport has the 1st runway numbered as 5?",
+      "expected_answer": "Angola International Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.6,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 2.0177825608059994,
+          "ndcg@10": 2.3739897479140217
+        },
+        "time": 0.09551000595092773,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.6,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 2.0177825608059994,
+          "ndcg@10": 2.3332474375917283
+        },
+        "time": 2.192805528640747,
+        "results_count": 10
+      },
+      "test_id": 31,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "What is the name of the runway at Amsterdam Airport Schiphol?",
+      "expected_answer": "runwayName",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5616063116448506,
+          "ndcg@10": 2.5616063116448506
+        },
+        "time": 0.09924077987670898,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5616063116448506,
+          "ndcg@10": 2.5616063116448506
+        },
+        "time": 2.231882095336914,
+        "results_count": 10
+      },
+      "test_id": 32,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "Which club does Aleksandr Prudnikov play for?",
+      "expected_answer": "club",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.1039581298828125,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.020753860473633,
+        "results_count": 10
+      },
+      "test_id": 33,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Who is Anders Osborne associated with as a musical artist?",
+      "expected_answer": "associatedMusicalArtist",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.4,
+          "precision@10": 0.5
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 1.6309297535714575,
+          "ndcg@10": 2.5543579088866597
+        },
+        "time": 0.10026693344116211,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.114448070526123,
+        "results_count": 10
+      },
+      "test_id": 34,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is the Asilomar Conference Grounds based on its architect?",
+      "expected_answer": "Building",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11753678321838379,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.379894495010376,
+        "results_count": 10
+      },
+      "test_id": 35,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What city is part of Ellington?",
+      "expected_answer": "Greenville",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.0
+        },
+        "time": 0.12195205688476562,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.0
+        },
+        "time": 1.7799711227416992,
+        "results_count": 10
+      },
+      "test_id": 36,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "In which city is the Akita Museum of Art located?",
+      "expected_answer": "Akita",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.09927845001220703,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.7
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.637999639320748
+        },
+        "time": 1.9539146423339844,
+        "results_count": 10
+      },
+      "test_id": 37,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Ashgabat International Airport?",
+      "expected_answer": "Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.10864520072937012,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.0843558311462402,
+        "results_count": 10
+      },
+      "test_id": 38,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What record label is Andrew White associated with?",
+      "expected_answer": "Universal Records",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.0
+        },
+        "time": 0.12091803550720215,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.0
+        },
+        "time": 1.929961919784546,
+        "results_count": 10
+      },
+      "test_id": 39,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of artist is Anders Osborne associated with the band Voice of the Wetlands All-Stars?",
+      "expected_answer": "MusicalArtist",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11805033683776855,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.522660493850708,
+        "results_count": 10
+      },
+      "test_id": 40,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the name of the runway at Amsterdam Airport Schiphol?",
+      "expected_answer": "18R/36L_Polderbaan",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.0
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 0
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.0
+        },
+        "time": 0.10807299613952637,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.0
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 0
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.0
+        },
+        "time": 2.22782301902771,
+        "results_count": 10
+      },
+      "test_id": 41,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What organization operates Bedford Aerodrome?",
+      "expected_answer": "MotorSport Vision",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.2,
+          "precision@10": 0.6
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.38685280723454163,
+          "ndcg@10": 1.981953026443495
+        },
+        "time": 0.11372065544128418,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.6
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.3046663059874146
+        },
+        "time": 2.0229294300079346,
+        "results_count": 10
+      },
+      "test_id": 42,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which league is Al-Wakrah Sport Club a part of?",
+      "expected_answer": "Qatar Stars League",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.7
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5177825608059994,
+          "ndcg@10": 3.522787958033084
+        },
+        "time": 0.15477228164672852,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.6,
+          "precision@10": 0.6
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.1309297535714578,
+          "ndcg@10": 3.0543579088866606
+        },
+        "time": 2.207473039627075,
+        "results_count": 10
+      },
+      "test_id": 43,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of artist is Anders Osborne associated with the band Voice of the Wetlands All-Stars?",
+      "expected_answer": "MusicalArtist",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11451172828674316,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.4147276878356934,
+        "results_count": 10
+      },
+      "test_id": 44,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What band is Aaron Bertram associated with?",
+      "expected_answer": "Kids Imagine Nation",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.6,
+          "precision@10": 0.5
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.5,
+          "ndcg@5": 1.3175293653079347,
+          "ndcg@10": 1.9076241872898039
+        },
+        "time": 0.10204935073852539,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.6,
+          "precision@10": 0.6
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.1309297535714578,
+          "ndcg@10": 3.1359351507985425
+        },
+        "time": 1.9439294338226318,
+        "results_count": 10
+      },
+      "test_id": 45,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Adolfo Suárez Madrid–Barajas Airport based on its elevation above sea level?",
+      "expected_answer": "Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.1104879379272461,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.5975184440612793,
+        "results_count": 10
+      },
+      "test_id": 46,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Where is the Asher and Mary Isabelle Richardson House located?",
+      "expected_answer": "U.S. Route 83",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.5
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 2.9484591188793923
+        },
+        "time": 0.125596284866333,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.5
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 1.5951002192089534
+        },
+        "time": 2.2776999473571777,
+        "results_count": 10
+      },
+      "test_id": 47,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the runway name of Afonso Pena International Airport?",
+      "expected_answer": "11/29",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.6309297535714575,
+          "ndcg@5": 1.0616063116448506,
+          "ndcg@10": 1.0616063116448506
+        },
+        "time": 0.17357707023620605,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.4306765580733931,
+          "ndcg@10": 1.4306765580733931
+        },
+        "time": 2.13138484954834,
+        "results_count": 10
+      },
+      "test_id": 48,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Where is Appleton International Airport located?",
+      "expected_answer": "Greenville",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.8
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.953464516106477
+        },
+        "time": 0.1102149486541748,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.8
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.953464516106477
+        },
+        "time": 1.956695318222046,
+        "results_count": 10
+      },
+      "test_id": 49,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the name of the runway at Alpena County Regional Airport?",
+      "expected_answer": "runwayName",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 1.6309297535714575,
+          "ndcg@10": 1.6309297535714575
+        },
+        "time": 0.11946392059326172,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.4,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 1.6309297535714575,
+          "ndcg@10": 2.2474246260211674
+        },
+        "time": 2.1623623371124268,
+        "results_count": 10
+      },
+      "test_id": 50,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What band is associated with the genre Rock music?",
+      "expected_answer": "Suburban Legends",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.6,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.1309297535714578,
+          "ndcg@10": 2.1309297535714578
+        },
+        "time": 0.15956544876098633,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.6,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.1309297535714578,
+          "ndcg@10": 2.1309297535714578
+        },
+        "time": 2.0455782413482666,
+        "results_count": 10
+      },
+      "test_id": 51,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Afonso Pena International Airport?",
+      "expected_answer": "Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11172366142272949,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.1839189529418945,
+        "results_count": 10
+      },
+      "test_id": 52,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Aleksander Barkov, Jr. associated with as a player?",
+      "expected_answer": "IceHockeyPlayer",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11867570877075195,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.4939827919006348,
+        "results_count": 10
+      },
+      "test_id": 53,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Where is Alpena County Regional Airport located?",
+      "expected_answer": "Maple Ridge Township",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 1.1309297535714575,
+          "ndcg@5": 1.9484591188793923,
+          "ndcg@10": 1.9484591188793923
+        },
+        "time": 0.12825703620910645,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5616063116448506,
+          "ndcg@10": 2.5616063116448506
+        },
+        "time": 1.952324628829956,
+        "results_count": 10
+      },
+      "test_id": 54,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "What is the runway number associated with Amsterdam Airport Schiphol?",
+      "expected_answer": "5thRunwayNumber",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 1.6309297535714575,
+          "ndcg@10": 1.6309297535714575
+        },
+        "time": 0.10846495628356934,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.2890648263178879
+        },
+        "time": 2.162134885787964,
+        "results_count": 10
+      },
+      "test_id": 55,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What city is part of Madrid?",
+      "expected_answer": "San Sebastián de los Reyes",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.3333333333333333
+        },
+        "time": 0.14978623390197754,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.3868528072345416,
+          "ndcg@10": 1.3868528072345416
+        },
+        "time": 1.8026270866394043,
+        "results_count": 10
+      },
+      "test_id": 56,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "Which club is Aleksandr Prudnikov currently associated with?",
+      "expected_answer": "Aleksandr Prudnikov",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.1381995677947998,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.0074548721313477,
+        "results_count": 10
+      },
+      "test_id": 57,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Where was Alex Day born?",
+      "expected_answer": "birthPlace",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.6
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.3046663059874146
+        },
+        "time": 0.12880301475524902,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.6
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.3046663059874146
+        },
+        "time": 1.9919450283050537,
+        "results_count": 10
+      },
+      "test_id": 58,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What category does Anders Osborne belong to?",
+      "expected_answer": "MusicalArtist",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.10409259796142578,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.093715190887451,
+        "results_count": 10
+      },
+      "test_id": 59,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What category does Canada belong to in terms of ethnic groups?",
+      "expected_answer": "Country",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11426019668579102,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.011502981185913,
+        "results_count": 10
+      },
+      "test_id": 60,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "When did the construction of 250 Delaware Avenue begin?",
+      "expected_answer": "250 Delaware Avenue",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.10339856147766113,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.9
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5177825608059994,
+          "ndcg@10": 4.112882780014953
+        },
+        "time": 1.6564843654632568,
+        "results_count": 10
+      },
+      "test_id": 61,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Who is Morelos's leader?",
+      "expected_answer": "State",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.6,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.1309297535714578,
+          "ndcg@10": 2.48713694067948
+        },
+        "time": 0.10509800910949707,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.2,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.43067655807339306,
+          "ndcg@10": 1.047171430523103
+        },
+        "time": 1.805725336074829,
+        "results_count": 10
+      },
+      "test_id": 62,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Who was the architect of Asher and Mary Isabelle Richardson House?",
+      "expected_answer": "Architect",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5616063116448506,
+          "ndcg@10": 2.5616063116448506
+        },
+        "time": 0.10605120658874512,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5616063116448506,
+          "ndcg@10": 2.5616063116448506
+        },
+        "time": 1.9744091033935547,
+        "results_count": 10
+      },
+      "test_id": 63,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "When was MotorSport Vision founded?",
+      "expected_answer": "2004",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.0
+        },
+        "time": 0.10013318061828613,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.43067655807339306,
+          "ndcg@10": 0.43067655807339306
+        },
+        "time": 1.6358623504638672,
+        "results_count": 10
+      },
+      "test_id": 64,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Afonso Pena International Airport?",
+      "expected_answer": "Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.17504429817199707,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 1.884613275527954,
+        "results_count": 10
+      },
+      "test_id": 65,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the name of the runway at Amsterdam Airport Schiphol?",
+      "expected_answer": "runwayName",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5616063116448506,
+          "ndcg@10": 2.5616063116448506
+        },
+        "time": 0.10746121406555176,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5616063116448506,
+          "ndcg@10": 2.5616063116448506
+        },
+        "time": 1.968620777130127,
+        "results_count": 10
+      },
+      "test_id": 66,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "What genre of music is Aleksandra Kovač associated with?",
+      "expected_answer": "Aleksandra Kovač",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.09834098815917969,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 1.8337178230285645,
+        "results_count": 10
+      },
+      "test_id": 67,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Afonso Pena International Airport based on its elevation above sea level?",
+      "expected_answer": "Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11806535720825195,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.1766107082366943,
+        "results_count": 10
+      },
+      "test_id": 68,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of building is Addis Ababa City Hall?",
+      "expected_answer": "Building",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.9
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.210226004755013
+        },
+        "time": 0.10602760314941406,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 1.8787639141082764,
+        "results_count": 10
+      },
+      "test_id": 69,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "How long is the third runway at Andrews County Airport in feet?",
+      "expected_answer": "Andrews_County_Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.0
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 0
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.0
+        },
+        "time": 0.09835529327392578,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.0
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 0
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.0
+        },
+        "time": 1.933854341506958,
+        "results_count": 10
+      },
+      "test_id": 70,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "How long is the runway at Bedford Aerodrome?",
+      "expected_answer": "runwayLength",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 1.1309297535714575,
+          "ndcg@5": 1.9484591188793923,
+          "ndcg@10": 1.9484591188793923
+        },
+        "time": 0.12483406066894531,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.8,
+          "precision@10": 0.7
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 1.1309297535714575,
+          "ndcg@5": 1.9484591188793923,
+          "ndcg@10": 2.9270644656386358
+        },
+        "time": 1.9466712474822998,
+        "results_count": 10
+      },
+      "test_id": 71,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "In which city is the Akita Museum of Art located?",
+      "expected_answer": "Akita",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.10739374160766602,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.7
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.637999639320748
+        },
+        "time": 1.7621052265167236,
+        "results_count": 10
+      },
+      "test_id": 72,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Who is Alfredo Zitarrosa musically associated with?",
+      "expected_answer": "associatedMusicalArtist",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.0
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 0
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.0
+        },
+        "time": 0.11078763008117676,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.6,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.1309297535714578,
+          "ndcg@10": 2.1309297535714578
+        },
+        "time": 1.9720497131347656,
+        "results_count": 10
+      },
+      "test_id": 73,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What genre is Anders Osborne associated with?",
+      "expected_answer": "Anders Osborne",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.10225224494934082,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 1.8818936347961426,
+        "results_count": 10
+      },
+      "test_id": 74,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Where is the headquarters of Turkmenistan Airlines located?",
+      "expected_answer": "Turkmenistan Airlines",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.10945653915405273,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.6309297535714575,
+          "ndcg@5": 0.6309297535714575,
+          "ndcg@10": 0.9642630869047908
+        },
+        "time": 1.9262423515319824,
+        "results_count": 10
+      },
+      "test_id": 75,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "Where is the hub airport for Turkmenistan Airlines located?",
+      "expected_answer": "hubAirport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 1.6309297535714575,
+          "ndcg@10": 1.6309297535714575
+        },
+        "time": 0.13346409797668457,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 1.6309297535714575,
+          "ndcg@10": 1.6309297535714575
+        },
+        "time": 1.8275830745697021,
+        "results_count": 10
+      },
+      "test_id": 76,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "Where is Adolfo Suárez Madrid–Barajas Airport located?",
+      "expected_answer": "location",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.1174619197845459,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 1.984581708908081,
+        "results_count": 10
+      },
+      "test_id": 77,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "Who is the coach of the Italy national under-17 football team?",
+      "expected_answer": "Alessandro Dal Canto",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.8,
+          "precision@10": 0.5
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 2.4484591188793923,
+          "ndcg@10": 2.8046663059874146
+        },
+        "time": 0.11203241348266602,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.6309297535714575,
+          "ndcg@5": 0.6309297535714575,
+          "ndcg@10": 0.6309297535714575
+        },
+        "time": 1.9559204578399658,
+        "results_count": 10
+      },
+      "test_id": 78,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "How many floors does the Akita Museum of Art have?",
+      "expected_answer": "floorCount",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.2,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.38685280723454163,
+          "ndcg@10": 1.076393327675897
+        },
+        "time": 0.18233799934387207,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.8,
+          "precision@10": 0.9
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 1.1309297535714575,
+          "ndcg@5": 1.9484591188793923,
+          "ndcg@10": 3.543559338088346
+        },
+        "time": 1.8610877990722656,
+        "results_count": 10
+      },
+      "test_id": 79,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is U.S. Città di Palermo in the context of soccer?",
+      "expected_answer": "SoccerClub",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11433577537536621,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.122279167175293,
+        "results_count": 10
+      },
+      "test_id": 80,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Where did Alan Shepard graduate from with an M.A. in 1957?",
+      "expected_answer": "Alan Shepard",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.10272622108459473,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.033259630203247,
+        "results_count": 10
+      },
+      "test_id": 81,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What category does Alan Shepard belong to based on receiving the American Defense Service ribbon award?",
+      "expected_answer": "Astronaut",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11564230918884277,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.0849411487579346,
+        "results_count": 10
+      },
+      "test_id": 82,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which musical artist is Jwaydan Moyine associated with?",
+      "expected_answer": "John Digweed",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.2,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.38685280723454163,
+          "ndcg@10": 0.9769476292164108
+        },
+        "time": 0.10212492942810059,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.4,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 1.6309297535714575,
+          "ndcg@10": 1.9642630869047908
+        },
+        "time": 1.9458849430084229,
+        "results_count": 10
+      },
+      "test_id": 83,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What country is Saranac Lake a part of?",
+      "expected_answer": "United States",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.6666666666666666,
+          "precision@5": 0.4,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.6309297535714575,
+          "ndcg@5": 1.6309297535714575,
+          "ndcg@10": 1.6309297535714575
+        },
+        "time": 0.10913729667663574,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.7
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.637999639320748
+        },
+        "time": 1.8323590755462646,
+        "results_count": 10
+      },
+      "test_id": 84,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the name of the runway at Amsterdam Airport Schiphol?",
+      "expected_answer": "18L/36R Aalsmeerbaan",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "ndcg@10": 1.0
+        },
+        "time": 0.09868836402893066,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.5,
+          "ndcg@5": 0.5,
+          "ndcg@10": 0.5
+        },
+        "time": 2.0355167388916016,
+        "results_count": 10
+      },
+      "test_id": 85,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "What city does Antwerp International Airport serve?",
+      "expected_answer": "serves",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.6
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.3046663059874146
+        },
+        "time": 0.12046504020690918,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 1.909437894821167,
+        "results_count": 10
+      },
+      "test_id": 86,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "What category does Ardmore Airport belong to based on its 3rd runway surface type?",
+      "expected_answer": "Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.1093132495880127,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.086374282836914,
+        "results_count": 10
+      },
+      "test_id": 87,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the ground of FC Spartak Moscow?",
+      "expected_answer": "Otkrytiye Arena",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.8
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.953464516106477
+        },
+        "time": 0.11999297142028809,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.9055596987675978
+        },
+        "time": 1.8626594543457031,
+        "results_count": 10
+      },
+      "test_id": 88,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Liselotte Grschebina?",
+      "expected_answer": "Photographer",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11629652976989746,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 1.8889389038085938,
+        "results_count": 10
+      },
+      "test_id": 89,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is located in Alcobendas?",
+      "expected_answer": "Adolfo Suárez Madrid–Barajas Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.9
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.242529342424365
+        },
+        "time": 0.12558698654174805,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.2,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.38685280723454163,
+          "ndcg@10": 0.7430599943425638
+        },
+        "time": 1.8108305931091309,
+        "results_count": 10
+      },
+      "test_id": 90,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is London a leader of according to the schema?",
+      "expected_answer": "CapitalCity",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11807394027709961,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.2
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.6895405204413555
+        },
+        "time": 1.9234464168548584,
+        "results_count": 10
+      },
+      "test_id": 91,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which political party leads in Alcobendas?",
+      "expected_answer": "leaderParty",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.6,
+          "precision@10": 0.3
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.1309297535714578,
+          "ndcg@10": 2.1309297535714578
+        },
+        "time": 0.16921687126159668,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 1.8161962032318115,
+        "results_count": 10
+      },
+      "test_id": 92,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "How long is the runway at Amsterdam Airport Schiphol?",
+      "expected_answer": "3500",
+      "original_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.38685280723454163,
+          "ndcg@10": 0.38685280723454163
+        },
+        "time": 0.1600050926208496,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.2,
+          "precision@10": 0.1
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.43067655807339306,
+          "ndcg@10": 0.43067655807339306
+        },
+        "time": 1.9790599346160889,
+        "results_count": 10
+      },
+      "test_id": 93,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What is the relationship between Appleton and Little Chute?",
+      "expected_answer": "isPartOf",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.6,
+          "precision@10": 0.5
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.1309297535714578,
+          "ndcg@10": 2.8204702740128136
+        },
+        "time": 0.142869234085083,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.5
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 2.9484591188793923
+        },
+        "time": 1.8870387077331543,
+        "results_count": 10
+      },
+      "test_id": 94,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "What type of entity is Antwerp International Airport?",
+      "expected_answer": "Airport",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.14606714248657227,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 2.074303388595581,
+        "results_count": 10
+      },
+      "test_id": 95,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which club does Alessio Romagnoli play for?",
+      "expected_answer": "club",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.11292314529418945,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 1.9263849258422852,
+        "results_count": 10
+      },
+      "test_id": 96,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Which city does Antwerp International Airport serve?",
+      "expected_answer": "Antwerp",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.10826301574707031,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.6
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.3046663059874146
+        },
+        "time": 1.910106897354126,
+        "results_count": 10
+      },
+      "test_id": 97,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "What is the relationship between Greenville and Dale?",
+      "expected_answer": "isPartOf",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5616063116448506,
+          "ndcg@10": 2.5616063116448506
+        },
+        "time": 0.11130738258361816,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 0.8,
+          "precision@10": 0.4
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.5616063116448506,
+          "ndcg@10": 2.5616063116448506
+        },
+        "time": 1.8500285148620605,
+        "results_count": 10
+      },
+      "test_id": 98,
+      "source_file": "enhanced_qa_dataset_test_no_type.json"
+    },
+    {
+      "question": "What ethnic group is African Americans a part of in the United States?",
+      "expected_answer": "African Americans",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 0.13325095176696777,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 1.0
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 4.543559338088346
+        },
+        "time": 1.8798539638519287,
+        "results_count": 10
+      },
+      "test_id": 99,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    },
+    {
+      "question": "Where is the Los Angeles Rams located?",
+      "expected_answer": "Los Angeles",
+      "original_method": {
+        "precision": {
+          "precision@1": 1.0,
+          "precision@3": 1.0,
+          "precision@5": 1.0,
+          "precision@10": 0.7
+        },
+        "recall": {
+          "recall@1": 1,
+          "recall@3": 1,
+          "recall@5": 1,
+          "recall@10": 1
+        },
+        "ndcg": {
+          "ndcg@1": 1.0,
+          "ndcg@3": 2.1309297535714578,
+          "ndcg@5": 2.9484591188793923,
+          "ndcg@10": 3.637999639320748
+        },
+        "time": 0.10225176811218262,
+        "results_count": 10
+      },
+      "cross_encoder_method": {
+        "precision": {
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0,
+          "precision@10": 0.0
+        },
+        "recall": {
+          "recall@1": 0,
+          "recall@3": 0,
+          "recall@5": 0,
+          "recall@10": 0
+        },
+        "ndcg": {
+          "ndcg@1": 0.0,
+          "ndcg@3": 0.0,
+          "ndcg@5": 0.0,
+          "ndcg@10": 0.0
+        },
+        "time": 1.8194570541381836,
+        "results_count": 10
+      },
+      "test_id": 100,
+      "source_file": "enhanced_qa_dataset_all_texts.json"
+    }
+  ],
+  "test_info": {
+    "total_questions": 100,
+    "successful_tests": 100,
+    "failed_tests": 0
+  }
+}

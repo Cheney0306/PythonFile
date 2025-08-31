@@ -3,6 +3,7 @@
 from typing import List, Dict, Tuple
 import re
 import config
+from openai import OpenAI
 
 class CoTKRRewriter:
     """CoTKR知识重写器 - 基于思维链的知识重写"""
@@ -305,7 +306,7 @@ class CoTKRRewriter:
     
     def extract_answer_from_knowledge(self, question: str, cotkr_knowledge: str, retrieved_items: List[Dict], prompt_type: str = None) -> str:
         """
-        从CoTKR知识中提取答案 - 支持四种问题类型，智能匹配最相关的答案
+        从CoTKR知识中提取答案 - 【新方法】使用LLM进行最终答案的生成
         
         Args:
             question: 查询问题或文本
@@ -316,9 +317,59 @@ class CoTKRRewriter:
         if not retrieved_items:
             return "Information not available in the knowledge base."
         
+        # 1. 构建一个新的、清晰的Prompt，要求LLM根据生成的"思维链"来回答问题
+        prompt = f"""You are an intelligent assistant. Your task is to provide a direct and concise answer to the user's question based *only* on the provided "Reasoning Steps".
+
+User's Question:
+"{question}"
+
+Reasoning Steps:
+---
+{cotkr_knowledge}
+---
+
+Based on the reasoning steps above, what is the final answer to the question?
+Provide only the answer itself, without any extra explanation.
+
+Final Answer:"""
+
+        # 2. 调用LLM来生成答案
+        try:
+            if not config.OPENAI_API_KEY or config.OPENAI_API_KEY == "your-openai-api-key-here":
+                print("⚠️ OpenAI API key not set. Falling back to simple extraction.")
+                # 如果没有API密钥，回退到简单的规则式提取
+                return self._fallback_extraction(question, retrieved_items, prompt_type)
+            
+            client = OpenAI(api_key=config.OPENAI_API_KEY)
+            
+            response = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=[
+                    {
+                        "role": "system", 
+                        "content": "You are a helpful assistant that provides a final, concise answer based on the reasoning context provided."
+                    },
+                    {
+                        "role": "user", 
+                        "content": prompt
+                    }
+                ],
+                temperature=0.0,  # 使用0温度，让答案更具确定性
+                max_tokens=60     # 答案通常很短，不需要太多token
+            )
+            
+            final_answer = response.choices[0].message.content.strip()
+            return final_answer
+            
+        except Exception as e:
+            print(f"❌ LLM-based answer extraction failed: {e}")
+            # 如果API调用失败，回退到简单的规则式提取
+            return self._fallback_extraction(question, retrieved_items, prompt_type)
+    
+    def _fallback_extraction(self, question: str, retrieved_items: List[Dict], prompt_type: str = None) -> str:
+        """回退方案：简单的规则式答案提取"""
         # 确定问题类型
         if prompt_type:
-            # 如果提供了prompt_type，直接使用并转换为内部格式
             type_mapping = {
                 'sub': 'subject',
                 'obj': 'object', 
@@ -327,12 +378,11 @@ class CoTKRRewriter:
             }
             question_type = type_mapping.get(prompt_type, 'subject')
         else:
-            # 否则检测问题类型
             question_type = self.detect_question_type(question)
         
         question_lower = question.lower()
         
-        # 智能答案提取 - 根据问题类型和语义匹配
+        # 简化的答案提取逻辑
         if question_type == 'subject':
             return self._extract_subject_answer(question_lower, retrieved_items)
         elif question_type == 'object':

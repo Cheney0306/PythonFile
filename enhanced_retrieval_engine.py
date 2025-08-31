@@ -26,12 +26,13 @@ class EnhancedRetrievalEngine:
             prompt_type: 问题类型 ('sub', 'obj', 'rel', 'type')
             use_reranking: 是否使用多阶段重排
         """
-        # 1. 使用增强的多阶段检索
+        # 1. 使用增强的多阶段检索 (使用Cross-Encoder重排)
         if use_reranking:
             retrieved_items = self.db_manager.multi_stage_retrieval(
-                question, 
+                query=question, 
                 n_results=n_results,
-                rerank_top_k=n_results * 2  # 扩大初始检索范围
+                rerank_top_k=n_results * config.RERANK_TOP_K_MULTIPLIER,  # 扩大初始检索范围
+                rerank_method='cross_encoder'  # 使用Cross-Encoder重排方法
             )
         else:
             # 回退到基础检索（用于对比）
