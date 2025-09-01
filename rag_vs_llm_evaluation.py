@@ -124,13 +124,15 @@ Answer:"""
             print(f"⚠ LLM调用失败: {e}")
             return "Error: LLM call failed"
     
-    def calculate_retrieval_metrics(self, retrieved_items: List[Dict], expected_answer: str, k_values: List[int] = [1, 3, 5]) -> Dict:
+    def calculate_retrieval_metrics(self, retrieved_items: List[Dict], expected_answer: str, 
+                                  original_triple: List[str] = None, k_values: List[int] = [1, 3, 5]) -> Dict:
         """
         计算检索指标: Precision@k, Recall@k, nDCG@k
         
         Args:
             retrieved_items: 检索到的项目列表
             expected_answer: 期望答案
+            original_triple: 生成问题所用的原始三元组
             k_values: 要计算的k值列表
         """
         if not retrieved_items:
@@ -140,30 +142,16 @@ Answer:"""
         
         # 计算每个检索项的相关性分数
         relevance_scores = []
-        expected_words = set(expected_answer.lower().split())
         
         for item in retrieved_items:
-            # 从检索项中提取文本内容
-            item_text = ""
-            if 'text' in item and item['text']:
-                item_text = item['text']
-            elif 'document' in item and item['document']:
-                item_text = item['document']
-            elif 'triple' in item:
-                # 从三元组构建文本
-                triple = item['triple']
-                item_text = f"{triple[0]} {triple[1]} {triple[2]}"
-            
-            # 计算相关性分数 (基于词汇重叠)
-            item_words = set(item_text.lower().split())
-            if len(expected_words) > 0:
-                overlap = len(item_words.intersection(expected_words))
-                relevance = overlap / len(expected_words)
+            if original_triple and 'triple' in item:
+                # 基于三元组的相关性判断
+                retrieved_triple = item['triple']
+                relevance, is_relevant = self._calculate_triple_relevance(retrieved_triple, original_triple)
             else:
-                relevance = 0.0
+                # 回退到基于词汇重叠的相关性判断
+                relevance, is_relevant = self._calculate_text_relevance(item, expected_answer)
             
-            # 转换为二进制相关性 (阈值为0.1)
-            is_relevant = 1 if relevance > 0.1 else 0
             relevance_scores.append((relevance, is_relevant))
         
         metrics = {}
@@ -197,6 +185,78 @@ Answer:"""
             metrics[f'ndcg@{k}'] = ndcg_k
         
         return metrics
+    
+    def _calculate_triple_relevance(self, retrieved_triple: List[str], original_triple: List[str]) -> Tuple[float, int]:
+        """
+        基于三元组计算相关性分数
+        
+        Args:
+            retrieved_triple: 检索到的三元组
+            original_triple: 原始三元组
+            
+        Returns:
+            (relevance_score, is_relevant): 相关性分数和二进制相关性
+        """
+        if not retrieved_triple or not original_triple:
+            return 0.0, 0
+        
+        # 确保两个三元组都有3个元素
+        if len(retrieved_triple) != 3 or len(original_triple) != 3:
+            return 0.0, 0
+        
+        # 计算匹配的元素数量
+        matches = 0
+        for i in range(3):
+            if retrieved_triple[i] == original_triple[i]:
+                matches += 1
+        
+        # 相关性判断逻辑:
+        # - 3个元素完全匹配: 最相关 (relevance=1.0, is_relevant=1)
+        # - 2个元素匹配: 部分相关 (relevance=0.6, is_relevant=1)  
+        # - 1个或0个元素匹配: 不相关 (relevance=0.0, is_relevant=0)
+        
+        if matches == 3:
+            return 1.0, 1  # 完全相关
+        elif matches == 2:
+            return 0.6, 1  # 部分相关
+        else:
+            return 0.0, 0  # 不相关
+    
+    def _calculate_text_relevance(self, item: Dict, expected_answer: str) -> Tuple[float, int]:
+        """
+        基于文本重叠计算相关性分数 (回退方法)
+        
+        Args:
+            item: 检索项
+            expected_answer: 期望答案
+            
+        Returns:
+            (relevance_score, is_relevant): 相关性分数和二进制相关性
+        """
+        expected_words = set(expected_answer.lower().split())
+        
+        # 从检索项中提取文本内容
+        item_text = ""
+        if 'text' in item and item['text']:
+            item_text = item['text']
+        elif 'document' in item and item['document']:
+            item_text = item['document']
+        elif 'triple' in item:
+            # 从三元组构建文本
+            triple = item['triple']
+            item_text = f"{triple[0]} {triple[1]} {triple[2]}"
+        
+        # 计算相关性分数 (基于词汇重叠)
+        item_words = set(item_text.lower().split())
+        if len(expected_words) > 0:
+            overlap = len(item_words.intersection(expected_words))
+            relevance = overlap / len(expected_words)
+        else:
+            relevance = 0.0
+        
+        # 转换为二进制相关性 (阈值为0.1)
+        is_relevant = 1 if relevance > 0.1 else 0
+        return relevance, is_relevant
 
     def evaluate_answer_similarity(self, predicted: str, expected: str) -> Dict[str, float]:
         """评估答案相似度"""
@@ -242,8 +302,10 @@ Answer:"""
             # 计算检索指标
             retrieved_items = rag_result.get('retrieved_items', [])
             if retrieved_items:
+                # 获取原始三元组信息
+                original_triple = qa_item.get('triple', None)
                 rag_retrieval_metrics = self.calculate_retrieval_metrics(
-                    retrieved_items, expected_answer, k_values=[1, 3, 5]
+                    retrieved_items, expected_answer, original_triple, k_values=[1, 3, 5]
                 )
             
         except Exception as e:

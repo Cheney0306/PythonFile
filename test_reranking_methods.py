@@ -63,7 +63,7 @@ class RerankingMethodComparator:
         print(f"✅ 加载了 {len(selected_questions)} 个测试问题")
         return selected_questions
     
-    def calculate_precision_at_k(self, retrieved_items: List[Dict], expected_answer: str, k_values: List[int]) -> Dict[str, float]:
+    def calculate_precision_at_k(self, retrieved_items: List[Dict], expected_answer: str, k_values: List[int], original_triple: List[str] = None) -> Dict[str, float]:
         """计算Precision@K指标"""
         precision_scores = {}
         
@@ -73,7 +73,7 @@ class RerankingMethodComparator:
             
             for item in top_k_items:
                 # 检查检索项是否与期望答案相关
-                if self._is_relevant(item, expected_answer):
+                if self._is_relevant(item, expected_answer, original_triple):
                     relevant_count += 1
             
             # Precision@K = 相关文档数 / K
@@ -81,7 +81,7 @@ class RerankingMethodComparator:
         
         return precision_scores
     
-    def calculate_recall_at_k(self, retrieved_items: List[Dict], expected_answer: str, k_values: List[int]) -> Dict[str, float]:
+    def calculate_recall_at_k(self, retrieved_items: List[Dict], expected_answer: str, k_values: List[int], original_triple: List[str] = None) -> Dict[str, float]:
         """计算Recall@K指标"""
         recall_scores = {}
         
@@ -91,7 +91,7 @@ class RerankingMethodComparator:
             
             for item in top_k_items:
                 # 检查检索项是否与期望答案相关
-                if self._is_relevant(item, expected_answer):
+                if self._is_relevant(item, expected_answer, original_triple):
                     relevant_count += 1
             
             # Recall@K = 相关文档数 / 总相关文档数 (这里假设总相关文档数为1)
@@ -99,7 +99,7 @@ class RerankingMethodComparator:
         
         return recall_scores
     
-    def calculate_ndcg_at_k(self, retrieved_items: List[Dict], expected_answer: str, k_values: List[int]) -> Dict[str, float]:
+    def calculate_ndcg_at_k(self, retrieved_items: List[Dict], expected_answer: str, k_values: List[int], original_triple: List[str] = None) -> Dict[str, float]:
         """计算nDCG@K指标"""
         ndcg_scores = {}
         
@@ -109,7 +109,7 @@ class RerankingMethodComparator:
             # 计算DCG@K
             dcg = 0.0
             for i, item in enumerate(top_k_items):
-                relevance = 1.0 if self._is_relevant(item, expected_answer) else 0.0
+                relevance = self._get_relevance_score(item, expected_answer, original_triple)
                 dcg += relevance / np.log2(i + 2)  # i+2 因为log2(1)=0
             
             # 计算IDCG@K (理想情况下的DCG)
@@ -120,9 +120,65 @@ class RerankingMethodComparator:
         
         return ndcg_scores
     
-    def _is_relevant(self, item: Dict, expected_answer: str) -> bool:
+    def _is_relevant(self, item: Dict, expected_answer: str, original_triple: List[str] = None) -> bool:
         """判断检索项是否与期望答案相关"""
-        # 简单的相关性判断：检查三元组中是否包含期望答案的关键词
+        if original_triple and 'triple' in item:
+            # 基于三元组的相关性判断
+            retrieved_triple = item['triple']
+            relevance_score = self._get_relevance_score(item, expected_answer, original_triple)
+            return relevance_score > 0.0
+        else:
+            # 回退到基于文本的相关性判断
+            return self._is_relevant_by_text(item, expected_answer)
+    
+    def _get_relevance_score(self, item: Dict, expected_answer: str, original_triple: List[str] = None) -> float:
+        """获取相关性分数"""
+        if original_triple and 'triple' in item:
+            # 基于三元组的相关性分数
+            retrieved_triple = item['triple']
+            return self._calculate_triple_relevance_score(retrieved_triple, original_triple)
+        else:
+            # 回退到基于文本的相关性分数
+            return 1.0 if self._is_relevant_by_text(item, expected_answer) else 0.0
+    
+    def _calculate_triple_relevance_score(self, retrieved_triple: List[str], original_triple: List[str]) -> float:
+        """
+        基于三元组计算相关性分数
+        
+        Args:
+            retrieved_triple: 检索到的三元组
+            original_triple: 原始三元组
+            
+        Returns:
+            相关性分数: 1.0(完全相关), 0.6(部分相关), 0.0(不相关)
+        """
+        if not retrieved_triple or not original_triple:
+            return 0.0
+        
+        # 确保两个三元组都有3个元素
+        if len(retrieved_triple) != 3 or len(original_triple) != 3:
+            return 0.0
+        
+        # 计算匹配的元素数量
+        matches = 0
+        for i in range(3):
+            if retrieved_triple[i] == original_triple[i]:
+                matches += 1
+        
+        # 相关性分数:
+        # - 3个元素完全匹配: 完全相关 (1.0)
+        # - 2个元素匹配: 部分相关 (0.6)  
+        # - 1个或0个元素匹配: 不相关 (0.0)
+        
+        if matches == 3:
+            return 1.0  # 完全相关
+        elif matches == 2:
+            return 0.6  # 部分相关
+        else:
+            return 0.0  # 不相关
+    
+    def _is_relevant_by_text(self, item: Dict, expected_answer: str) -> bool:
+        """基于文本内容判断相关性 (回退方法)"""
         triple = item.get('triple', [])
         text = item.get('text', '')
         document = item.get('document', '')
@@ -142,7 +198,7 @@ class RerankingMethodComparator:
         
         return False
     
-    def test_single_question(self, question: str, expected_answer: str) -> Dict:
+    def test_single_question(self, question: str, expected_answer: str, original_triple: List[str] = None) -> Dict:
         """测试单个问题的两种重排方法"""
         k_values = [1, 3, 5, 10]
         
@@ -167,13 +223,13 @@ class RerankingMethodComparator:
         cross_encoder_time = time.time() - start_time
         
         # 计算指标
-        original_precision = self.calculate_precision_at_k(original_results, expected_answer, k_values)
-        original_recall = self.calculate_recall_at_k(original_results, expected_answer, k_values)
-        original_ndcg = self.calculate_ndcg_at_k(original_results, expected_answer, k_values)
+        original_precision = self.calculate_precision_at_k(original_results, expected_answer, k_values, original_triple)
+        original_recall = self.calculate_recall_at_k(original_results, expected_answer, k_values, original_triple)
+        original_ndcg = self.calculate_ndcg_at_k(original_results, expected_answer, k_values, original_triple)
         
-        cross_encoder_precision = self.calculate_precision_at_k(cross_encoder_results, expected_answer, k_values)
-        cross_encoder_recall = self.calculate_recall_at_k(cross_encoder_results, expected_answer, k_values)
-        cross_encoder_ndcg = self.calculate_ndcg_at_k(cross_encoder_results, expected_answer, k_values)
+        cross_encoder_precision = self.calculate_precision_at_k(cross_encoder_results, expected_answer, k_values, original_triple)
+        cross_encoder_recall = self.calculate_recall_at_k(cross_encoder_results, expected_answer, k_values, original_triple)
+        cross_encoder_ndcg = self.calculate_ndcg_at_k(cross_encoder_results, expected_answer, k_values, original_triple)
         
         return {
             'question': question,
@@ -204,7 +260,9 @@ class RerankingMethodComparator:
         
         for i, qa_item in enumerate(tqdm(test_questions, desc="测试进度")):
             try:
-                result = self.test_single_question(qa_item['question'], qa_item['answer'])
+                # 获取原始三元组信息
+                original_triple = qa_item.get('triple', None)
+                result = self.test_single_question(qa_item['question'], qa_item['answer'], original_triple)
                 result['test_id'] = i + 1
                 result['source_file'] = qa_item['source_file']
                 all_results.append(result)
