@@ -105,7 +105,7 @@ class EnhancedQAGenerator:
             'type': """**Example:**
 - Triple: (Amsterdam Airport Schiphol, location, Haarlemmermeer)
 - Schema: (Airport, location, City)
-- Question: What is Amsterdam Airport Schiphol?
+- Question: What is the entity type of Amsterdam Airport Schiphol?
 - Answer: Airport"""
         }
         
@@ -191,7 +191,7 @@ Answer: [your answer]"""
             client = OpenAI(api_key=self.openai_api_key)
             
             response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model="gpt-4o",
                 messages=[
                     {
                         "role": "system",
